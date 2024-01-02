@@ -1,0 +1,82 @@
+import Front from "./front/Front";
+import Back from "./back/Back";
+import Side from "./side/Side";
+import Aesthetics from "./aesthetics/Aesthetics";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+
+function Customize() {
+  const designe = [<Front />, <Back />, <Side />, <Aesthetics />];
+  return (
+    <section className="my-32">
+      <div
+        style={{ marginTop: "4rem", marginBottom: "4rem", textAlign: "center" }}
+      >
+        <div
+          style={{ borderBottom: "2px solid gray", display: "inline-block" }}
+        >
+          <div className="mx-16" style={{ float: "right" }}>
+            Aesthtics
+          </div>
+          <div className="mx-16" style={{ float: "right" }}>
+            Back
+          </div>
+          <div className="mx-16" style={{ float: "right" }}>
+            Side
+          </div>
+          <div className="mx-16" style={{ float: "right" }}>
+            Front
+          </div>
+        </div>
+      </div>
+      <Carousel
+        // className="w-full max-w-xs"
+        style={{
+          margin: "auto auto",
+          width: "50rem",
+          //   height: "100vh",
+        }}
+      >
+        <CarouselPrevious />
+        <CarouselContent>
+          {designe.map((card, index) => (
+            <CarouselItem style={{ display: "flex" }} key={index}>
+              {card}
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselNext />
+      </Carousel>
+      <div style={{ textAlign: "center", marginTop: "3rem" }}>
+        <Button
+          style={{
+            backgroundColor: "#FF5C00",
+            color: "black",
+            padding: "2rem",
+            marginRight: "2rem",
+          }}
+        >
+          CheckOut
+        </Button>
+        <Button
+          style={{
+            backgroundColor: "#A3A3A3",
+            color: "black",
+            padding: "2rem",
+            marginLeft: "2rem",
+          }}
+        >
+          Add to Cart
+        </Button>
+      </div>
+    </section>
+  );
+}
+
+export default Customize;

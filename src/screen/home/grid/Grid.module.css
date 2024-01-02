@@ -1,0 +1,23 @@
+.grid_container {
+  width: 1000px;
+  columns: 3;
+  column-gap: 30px;
+  margin: 6rem auto;
+}
+.grid_container > div {
+  width: 20rem;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  break-inside: avoid;
+}
+.explore_button {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  padding: 0.7rem 2rem 0.7rem 2rem;
+}
+
+.explore_button:hover {
+  background-color: rgb(38, 38, 38);
+}

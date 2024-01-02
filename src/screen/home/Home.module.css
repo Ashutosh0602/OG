@@ -1,0 +1,68 @@
+.text_button_container {
+  width: calc(100vw * 0.4);
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.p1 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-family: "Rufina";
+  font-weight: 400;
+  letter-spacing: 0.05cm;
+}
+.p2 {
+  font-size: 3.5rem;
+  line-height: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Rufina";
+  font-weight: 500;
+  color: #ff05c8;
+  letter-spacing: 0.05cm;
+}
+
+.explore_button_container {
+  /* margin-top: 20rem; */
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+.explore_button {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  padding: 0.7rem 2rem 0.7rem 2rem;
+}
+
+.explore_button:hover {
+  background-color: rgb(38, 38, 38);
+}
+
+.model_img_div {
+  background-color: #bfbfbf;
+  overflow: hidden;
+  width: 40vw;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 7rem 1rem 7rem 7rem;
+}
+
+.dotted_bottom {
+  width: 6rem;
+  position: absolute;
+  bottom: 4rem;
+  transform: translateX(-50%);
+}
+
+.dotted_up {
+  width: 6rem;
+  position: absolute;
+  top: 0rem;
+  right: -10%;
+  /* transform: translateX(-50%); */
+}
+
+.model_container {
+  position: relative;
+}
