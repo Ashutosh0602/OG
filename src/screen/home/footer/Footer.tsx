@@ -12,7 +12,10 @@ function Footer() {
             <div>
               <img style={{ width: "9rem" }} src={logo} />
             </div>
-            <div className="flex justify-around" style={{ width: "100%" }}>
+            <div
+              className="flex justify-around"
+              style={{ width: "100%", marginTop: "1rem" }}
+            >
               <AiOutlineFacebook
                 style={{ fill: "white", width: "1.5rem", height: "1.5rem" }}
               />
@@ -103,7 +106,7 @@ function Footer() {
             color: "white",
             position: "absolute",
             right: 0,
-            translate: "-10% -50%",
+            translate: "0% -50%",
           }}
         >
           <p className="ml-12">Terms</p>

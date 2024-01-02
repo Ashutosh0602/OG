@@ -4,12 +4,22 @@
   column-gap: 30px;
   margin: 6rem auto;
 }
+.card_model:hover > div {
+  width: "50rem";
+}
+
 .grid_container > div {
   width: 20rem;
   margin-bottom: 30px;
   border-radius: 15px;
   overflow: hidden;
-  break-inside: avoid;
+  transition: all 0.4s linear;
+}
+.card_model:hover div,
+.card_model:hover div div {
+  /* background-color: aliceblue !important; */
+  /* transform-origin: bottom; */
+  /* visibility: visible; */
 }
 .explore_button {
   background-color: black;

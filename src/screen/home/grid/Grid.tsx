@@ -1,6 +1,7 @@
 import img1 from "../../../assets/grid/grid1.png";
 import img2 from "../../../assets/grid/grid2.png";
 import classes from "./Grid.module.css";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 function Grid() {
   return (
@@ -20,14 +21,84 @@ function Grid() {
         crafted designer clothes!
       </div>
       <div className={classes.grid_container}>
-        <div>
+        <div className={classes.card_model} style={{ position: "relative" }}>
           <img src={img1} />
+
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundColor: "#7E7E7E",
+              color: "white",
+              padding: "0.5rem",
+              borderRadius: "15px",
+              width: "100%",
+              fontFamily: "Roboto slab",
+            }}
+          >
+            <div>Design Clothes Caption</div>
+            <div className="flex items-center justify-end">
+              <div className="mr-2">Profile Name</div>
+              <div>
+                <Avatar>
+                  <AvatarImage src={img1} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
+        <div style={{ position: "relative" }}>
           <img src={img2} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundColor: "#7E7E7E",
+              color: "white",
+              padding: "0.5rem",
+              borderRadius: "15px",
+              width: "100%",
+              fontFamily: "Roboto slab",
+            }}
+          >
+            <div>Design Clothes Caption</div>
+            <div className="flex items-center justify-end">
+              <div className="mr-2">Profile Name</div>
+              <div>
+                <Avatar>
+                  <AvatarImage src={img2} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
+        <div style={{ position: "relative" }}>
           <img src={img1} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundColor: "#7E7E7E",
+              color: "white",
+              padding: "0.5rem",
+              borderRadius: "15px",
+              width: "100%",
+              fontFamily: "Roboto slab",
+            }}
+          >
+            <div>Design Clothes Caption</div>
+            <div className="flex items-center justify-end">
+              <div className="mr-2">Profile Name</div>
+              <div>
+                <Avatar>
+                  <AvatarImage src={img1} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <div
@@ -67,20 +138,135 @@ function Grid() {
             Relatables
           </div>
         </div>
-        <div>
+        <div style={{ position: "relative" }}>
           <img src={img2} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundColor: "#7E7E7E",
+              color: "white",
+              padding: "0.5rem",
+              borderRadius: "15px",
+              width: "100%",
+              fontFamily: "Roboto slab",
+            }}
+          >
+            <div>Design Clothes Caption</div>
+            <div className="flex items-center justify-end">
+              <div className="mr-2">Profile Name</div>
+              <div>
+                <Avatar>
+                  <AvatarImage src={img2} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
+        <div style={{ position: "relative" }}>
           <img src={img1} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundColor: "#7E7E7E",
+              color: "white",
+              padding: "0.5rem",
+              borderRadius: "15px",
+              width: "100%",
+              fontFamily: "Roboto slab",
+            }}
+          >
+            <div>Design Clothes Caption</div>
+            <div className="flex items-center justify-end">
+              <div className="mr-2">Profile Name</div>
+              <div>
+                <Avatar>
+                  <AvatarImage src={img1} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
+        <div style={{ position: "relative" }}>
           <img src={img2} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundColor: "#7E7E7E",
+              color: "white",
+              padding: "0.5rem",
+              borderRadius: "15px",
+              width: "100%",
+              fontFamily: "Roboto slab",
+            }}
+          >
+            <div>Design Clothes Caption</div>
+            <div className="flex items-center justify-end">
+              <div className="mr-2">Profile Name</div>
+              <div>
+                <Avatar>
+                  <AvatarImage src={img2} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
+        <div style={{ position: "relative" }}>
           <img src={img1} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundColor: "#7E7E7E",
+              color: "white",
+              padding: "0.5rem",
+              borderRadius: "15px",
+              width: "100%",
+              fontFamily: "Roboto slab",
+            }}
+          >
+            <div>Design Clothes Caption</div>
+            <div className="flex items-center justify-end">
+              <div className="mr-2">Profile Name</div>
+              <div>
+                <Avatar>
+                  <AvatarImage src={img1} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
+        <div style={{ position: "relative" }}>
           <img src={img2} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundColor: "#7E7E7E",
+              color: "white",
+              padding: "0.5rem",
+              borderRadius: "15px",
+              width: "100%",
+              fontFamily: "Roboto slab",
+            }}
+          >
+            <div>Design Clothes Caption</div>
+            <div className="flex items-center justify-end">
+              <div className="mr-2">Profile Name</div>
+              <div>
+                <Avatar>
+                  <AvatarImage src={img2} />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div

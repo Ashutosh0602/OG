@@ -20,11 +20,11 @@ function Navbar() {
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-12 ml-8" alt="OG Logo" />
         </a>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex items-end md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Dialog>
             <DialogTrigger>
-              <button>
-                <img src={search} className="w-8 p-auto mr-8" />
+              <button style={{ transform: "translate(0, 10%)" }}>
+                <img src={search} className="w-8 p-auto mr-8 my-auto" />
               </button>
             </DialogTrigger>
             <DialogContent>
@@ -47,8 +47,11 @@ function Navbar() {
           </Dialog>
 
           <NavLink to="/cart">
-            <button>
-              <img src={cart} className="w-8 p-auto mr-8" />
+            <button
+              style={{ transform: "translate(0, 20%)" }}
+              className="m-auto"
+            >
+              <img src={cart} className="w-8 mr-8 m-auto" />
             </button>
           </NavLink>
           <NavLink to="/signIn">

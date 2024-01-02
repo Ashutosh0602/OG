@@ -46,7 +46,7 @@ function Home() {
         style={{
           position: "relative",
           width: "100vw",
-          backgroundColor: "black",
+          backgroundColor: "rgb(0,0,0,0.5)",
           height: "0.2rem",
         }}
       >
@@ -69,7 +69,7 @@ function Home() {
         style={{
           position: "relative",
           width: "100vw",
-          backgroundColor: "black",
+          backgroundColor: "rgb(0,0,0,0.5)",
           height: "0.2rem",
         }}
       >
@@ -92,7 +92,7 @@ function Home() {
         style={{
           position: "relative",
           width: "100vw",
-          backgroundColor: "black",
+          backgroundColor: "rgb(0,0,0,0.5)",
           height: "0.2rem",
         }}
       >
@@ -115,7 +115,7 @@ function Home() {
         style={{
           position: "relative",
           width: "100vw",
-          backgroundColor: "black",
+          backgroundColor: "rgb(0,0,0,0.5)",
           height: "0.2rem",
         }}
       >
