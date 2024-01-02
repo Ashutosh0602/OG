@@ -1,29 +1,7 @@
 import logo from "../../assets/grid/OGlogo.png";
-import search from "../../assets/grid/search.svg";
 import cart from "../../assets/grid/cart.svg";
 import { NavLink } from "react-router-dom";
-import { Input } from "@/components/ui/input";
-import {
-  Command,
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
-} from "@/components/ui/command";
-
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
+import { Command, CommandInput } from "@/components/ui/command";
 
 function Navbar() {
   return (
