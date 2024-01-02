@@ -4,6 +4,18 @@ import cart from "../../assets/grid/cart.svg";
 import { NavLink } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command";
+
+import {
   Dialog,
   DialogContent,
   DialogDescription,
@@ -21,34 +33,14 @@ function Navbar() {
           <img src={logo} className="h-12 ml-8" alt="OG Logo" />
         </a>
         <div className="flex items-end md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Dialog>
-            <DialogTrigger>
-              <button style={{ transform: "translate(0, 10%)" }}>
-                <img src={search} className="w-8 p-auto mr-8 my-auto" />
-              </button>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Are you sure absolutely sure?</DialogTitle>
-                <DialogDescription>
-                  <div className="grid grid-cols-4 items-center gap-4">
-                    <Input
-                      id="username"
-                      placeholder="Shirt/Jeans"
-                      className="col-span-3"
-                    />
-                    <Label htmlFor="username" className="text-center">
-                      Search
-                    </Label>
-                  </div>{" "}
-                </DialogDescription>
-              </DialogHeader>
-            </DialogContent>
-          </Dialog>
-
+          <button className="m-auto">
+            <Command style={{ border: "1px solid black" }}>
+              <CommandInput placeholder="search..." />
+            </Command>
+          </button>
           <NavLink to="/cart">
             <button
-              style={{ transform: "translate(0, 20%)" }}
+              style={{ marginLeft: "1rem", transform: "translate(0, 20%)" }}
               className="m-auto"
             >
               <img src={cart} className="w-8 mr-8 m-auto" />
@@ -95,7 +87,7 @@ function Navbar() {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black"
+                className=" py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-slate-600"
                 aria-current="page"
               >
                 <NavLink to="">Home</NavLink>
@@ -104,7 +96,7 @@ function Navbar() {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black"
+                className=" py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-slate-600"
               >
                 <NavLink to="shop">Shop</NavLink>
               </a>
@@ -112,7 +104,7 @@ function Navbar() {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black"
+                className=" py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-slate-600"
               >
                 <NavLink to="customize">Customize</NavLink>
               </a>
@@ -120,7 +112,7 @@ function Navbar() {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black"
+                className=" py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-slate-600"
               >
                 Categories
               </a>

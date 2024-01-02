@@ -66,7 +66,7 @@ const data = [
 
 function Collection(): any {
   return (
-    <section className="my-24">
+    <section className="my-4">
       <div
         style={{
           fontSize: "2rem",
@@ -77,7 +77,7 @@ function Collection(): any {
         Collection
       </div>
       <div
-        style={{ marginTop: "4rem", marginBottom: "4rem", textAlign: "center" }}
+        style={{ marginTop: "2rem", marginBottom: "1rem", textAlign: "center" }}
       >
         <div style={{ display: "inline-block" }}>
           <div className="mx-16" style={{ cursor: "pointer", float: "right" }}>
