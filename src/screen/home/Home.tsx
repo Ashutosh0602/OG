@@ -1,3 +1,8 @@
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import classes from "./Home.module.css";
 import model_svg from "../../assets/grid/model.svg";
 import dotted from "../../assets/grid/dotted.svg";
@@ -7,11 +12,15 @@ import Products from "./products/Products";
 import Offer from "./offer/Offer";
 import Footer from "./footer/Footer";
 import Grid from "./grid/Grid";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
     <>
-      <section className="flex flex-wrap justify-around mt-20 mb-16 overflow-hidden relative">
+      <section
+        style={{ height: "80vh" }}
+        className="flex flex-wrap justify-around mt-20 mb-16 overflow-hidden relative"
+      >
         <div className={classes.text_button_container}>
           <div>
             <div>
@@ -28,18 +37,59 @@ function Home() {
         </div>
         <div className={classes.model_container}>
           <div className={classes.model_img_div}>
-            <img
-              src={model_svg}
-              style={{ objectFit: "fill" }}
-              className={classes.model_img}
-            />
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              freeMode={true}
+              speed={1000}
+              autoplay={{
+                delay: 1000,
+                waitForTransition: true,
+                stopOnLastSlide: true,
+                disableOnInteraction: false,
+              }}
+              navigation={false}
+              modules={[Autoplay]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img
+                  src={model_svg}
+                  style={{ objectFit: "fill" }}
+                  className={classes.model_img}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src={model_svg}
+                  style={{ objectFit: "fill" }}
+                  className={classes.model_img}
+                />
+              </SwiperSlide>
+            </Swiper>
           </div>
-          <div>
+          <motion.div
+            initial={{ x: 0, y: "4rem" }}
+            animate={{
+              x: "100%",
+              y: ["0rem", "3rem", "0rem"],
+            }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 1 }}
+          >
             <img src={dotted} className={classes.dotted_bottom} />
-          </div>
-          <div>
-            <img src={dotted} className={classes.dotted_up} />
-          </div>
+          </motion.div>
+          <motion.div>
+            <motion.img
+              initial={{ x: 0, y: 0 }}
+              animate={{
+                x: "-34vw",
+                y: ["0rem", "-3rem", "0rem"],
+              }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 1 }}
+              src={dotted}
+              className={classes.dotted_up}
+            />
+          </motion.div>
         </div>
       </section>
       <div
@@ -47,7 +97,7 @@ function Home() {
           position: "relative",
           width: "100vw",
           backgroundColor: "rgb(0,0,0,0.5)",
-          height: "0.2rem",
+          height: "0.1rem",
         }}
       >
         <div>
@@ -70,7 +120,7 @@ function Home() {
           position: "relative",
           width: "100vw",
           backgroundColor: "rgb(0,0,0,0.5)",
-          height: "0.2rem",
+          height: "0.1rem",
         }}
       >
         <div>
@@ -93,7 +143,7 @@ function Home() {
           position: "relative",
           width: "100vw",
           backgroundColor: "rgb(0,0,0,0.5)",
-          height: "0.2rem",
+          height: "0.1rem",
         }}
       >
         <div>
@@ -116,7 +166,7 @@ function Home() {
           position: "relative",
           width: "100vw",
           backgroundColor: "rgb(0,0,0,0.5)",
-          height: "0.2rem",
+          height: "0.1rem",
         }}
       >
         <div>

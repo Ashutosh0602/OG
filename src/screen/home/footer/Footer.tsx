@@ -1,11 +1,11 @@
-import logo from "../../../assets/grid/ogLogonew.jpg";
+import logo from "../../../assets/grid/ogPNG.png";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { TfiTwitter } from "react-icons/tfi";
 import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <section className="mt-32 py-32 bg-black">
+    <section className="mt-32 py-32" style={{ backgroundColor: "#202020" }}>
       <div className="flex flex-wrap justify-around">
         <div style={{ width: "50%" }} className="flex flex-wrap justify-around">
           <div>
@@ -64,7 +64,7 @@ function Footer() {
             <input
               placeholder="Enter your e-mail"
               style={{
-                backgroundColor: "black",
+                backgroundColor: "#202020",
                 border: "2px white solid",
                 borderTopLeftRadius: "3px",
                 borderBottomLeftRadius: "3px",
@@ -102,7 +102,7 @@ function Footer() {
         <div
           className="flex"
           style={{
-            backgroundColor: "black",
+            backgroundColor: "#202020",
             color: "white",
             position: "absolute",
             right: 0,

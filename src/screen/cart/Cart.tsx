@@ -49,11 +49,11 @@ function Cart() {
               <Button className="px-12 py-6">Proceed</Button>
             </DrawerTrigger>
           </div>
-          <DrawerContent style={{ maxHeight: "80vh" }}>
+          <DrawerContent style={{ maxHeight: "75vh" }}>
             <DrawerHeader style={{ overflow: "scroll" }}>
               <DrawerTitle>Are you sure absolutely sure?</DrawerTitle>
               <DrawerDescription>
-                {Array.from({ length: 4 }).map(() => {
+                {Array.from({ length: 5 }).map(() => {
                   return (
                     <div className="space-y-4 mx-6 my-6">
                       <Skeleton className="h-64 w-64 " />
