@@ -3,11 +3,10 @@ import cart from "../../assets/grid/cart.svg";
 import { NavLink } from "react-router-dom";
 import { Command, CommandInput } from "@/components/ui/command";
 import classes from "./Navbar.module.css";
-import { useState } from "react";
+// import { useState } from "react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
