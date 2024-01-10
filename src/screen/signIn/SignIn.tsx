@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import classes from "./SignIn.module.css";
+// import classes from "./SignIn.module.css";
 
 const screen = window.screen.width;
 
