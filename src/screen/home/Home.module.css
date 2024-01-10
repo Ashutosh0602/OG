@@ -85,7 +85,7 @@
 @media only screen and (max-width: 500px) {
   .mb_homeSection {
     margin-top: 0px !important;
-    height: 100vh !important;
+    /* height: 100vh !important; */
   }
   .text_button_container {
     /* display: block; */
@@ -109,14 +109,14 @@
   .mb_model {
     display: block !important;
     position: absolute;
-    /* height: 100vh; */
+    height: 80vh;
     top: 0;
     left: 0;
     z-index: -1;
   }
   .mb_model > img {
     width: 100vw;
-    height: 120vh;
+    height: 80vh;
     /* object-fit: fill; */
   }
   .model_container {

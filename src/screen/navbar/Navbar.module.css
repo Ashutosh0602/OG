@@ -2,10 +2,12 @@
   .mb_navbarSearch {
     display: none;
   }
-
+  .mb_navbar {
+    display: none;
+  }
   li > a {
     padding: 0 !important;
     font-size: 1rem;
-    margin-bottom: 1rem !important;
+    margin-bottom: 1rem;
   }
 }
