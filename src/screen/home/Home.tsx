@@ -14,29 +14,38 @@ import Footer from "./footer/Footer";
 import Grid from "./grid/Grid";
 import { motion } from "framer-motion";
 
+const screen = window.screen.width;
+
 function Home() {
+  console.log(screen);
   return (
     <>
-      <motion.div
-        initial={{ height: "92vh" }}
-        animate={{ height: 0, transition: { duration: 1 } }}
-        exit={{
-          height: "92vh",
-          transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
-        }}
-        className={classes.stop_motion}
-        style={{
-          position: "absolute",
-          // top: 0,
-          bottom: 0,
-          width: "100%",
-          height: "0vh",
-          backgroundColor: "#202020",
-          zIndex: 100,
-        }}
-      >
-        {/* <img src={logo} /> */}
-      </motion.div>
+      {() => {
+        if (screen > 500) {
+          return (
+            <motion.div
+              initial={{ height: "92vh" }}
+              animate={{ height: 0, transition: { duration: 1 } }}
+              exit={{
+                height: "92vh",
+                transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
+              }}
+              // className={classes.stop_motion}
+              style={{
+                position: "absolute",
+                // top: 0,
+                bottom: 0,
+                width: "100%",
+                height: "0vh",
+                backgroundColor: "#202020",
+                zIndex: 100,
+              }}
+            >
+              {/* <img src={logo} /> */}
+            </motion.div>
+          );
+        }
+      }}
       <section
         style={{ height: "80vh" }}
         className={`${classes.mb_homeSection} flex flex-wrap justify-around  mb-16 overflow-hidden relative`}

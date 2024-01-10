@@ -16,28 +16,38 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import classes from "./SignIn.module.css";
 
+const screen = window.screen.width;
+
 function SignIn() {
   const [userType, setUserType] = useState("");
   return (
     <>
-      <motion.div
-        initial={{ height: "92vh" }}
-        animate={{ height: 0, transition: { duration: 1 } }}
-        exit={{
-          height: "92vh",
-          transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
-        }}
-        className={classes.stop_motion}
-        style={{
-          position: "absolute",
-          // top: 0,
-          bottom: 0,
-          width: "100%",
-          height: "0vh",
-          backgroundColor: "#202020",
-          zIndex: 100,
-        }}
-      ></motion.div>
+      {() => {
+        if (screen > 500) {
+          return (
+            <motion.div
+              initial={{ height: "92vh" }}
+              animate={{ height: 0, transition: { duration: 1 } }}
+              exit={{
+                height: "92vh",
+                transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
+              }}
+              // className={classes.stop_motion}
+              style={{
+                position: "absolute",
+                // top: 0,
+                bottom: 0,
+                width: "100%",
+                height: "0vh",
+                backgroundColor: "#202020",
+                zIndex: 100,
+              }}
+            >
+              {/* <img src={logo} /> */}
+            </motion.div>
+          );
+        }
+      }}
       <div className="relative flex flex-col justify-center items-center min-h-screen overflow-hidden">
         <div className="w-full m-auto bg-white lg:max-w-lg">
           <Card>

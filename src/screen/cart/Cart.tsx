@@ -11,29 +11,39 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { motion } from "framer-motion";
-import classes from "./Cart.module.css";
+// import classes from "./Cart.module.css";
+
+const screen = window.screen.width;
 
 function Cart() {
   return (
     <>
-      <motion.div
-        initial={{ height: "92vh" }}
-        animate={{ height: 0, transition: { duration: 1 } }}
-        exit={{
-          height: "92vh",
-          transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
-        }}
-        className={classes.stop_motion}
-        style={{
-          position: "absolute",
-          // top: 0,
-          bottom: 0,
-          width: "100%",
-          height: "0vh",
-          backgroundColor: "#202020",
-          zIndex: 100,
-        }}
-      ></motion.div>
+      {() => {
+        if (screen > 500) {
+          return (
+            <motion.div
+              initial={{ height: "92vh" }}
+              animate={{ height: 0, transition: { duration: 1 } }}
+              exit={{
+                height: "92vh",
+                transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
+              }}
+              // className={classes.stop_motion}
+              style={{
+                position: "absolute",
+                // top: 0,
+                bottom: 0,
+                width: "100%",
+                height: "0vh",
+                backgroundColor: "#202020",
+                zIndex: 100,
+              }}
+            >
+              {/* <img src={logo} /> */}
+            </motion.div>
+          );
+        }
+      }}
       <section className="my-12">
         <div
           style={{
