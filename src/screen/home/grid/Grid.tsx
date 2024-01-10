@@ -3,7 +3,7 @@ import img2 from "../../../assets/grid/grid2.png";
 import classes from "./Grid.module.css";
 import { NavLink } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
+import { motion } from "framer-motion";
 function Grid() {
   return (
     <section className="my-32">
@@ -21,22 +21,45 @@ function Grid() {
         Immerse yourself in the world of luxury fashion with our meticulously
         crafted designer clothes!
       </div>
-      <div className={classes.grid_container}>
+      <div style={{ display: "none" }} className={classes.mb_grid_container}>
+        <div
+          style={{
+            textAlign: "center",
+            backgroundColor: "#B6B9B7",
+            paddingTop: "1rem",
+            paddingBottom: "1rem",
+            borderRadius: "15px",
+            margin: "0.5rem 1rem 0.5rem 1rem",
+            // marginTop: "0.5rem",
+            // marginBottom: "0.5rem",
+          }}
+        >
+          Latest
+        </div>
         <NavLink to="/designer">
-          <div className={classes.card_model} style={{ position: "relative" }}>
+          <div
+            className={classes.card_model}
+            style={{
+              marginBottom: "1rem",
+              position: "relative",
+              padding: "1rem",
+            }}
+          >
             <img src={img1} />
 
-            <div
+            <motion.div
               style={{
                 position: "absolute",
                 bottom: 0,
                 backgroundColor: "#7E7E7E",
                 color: "white",
                 padding: "0.5rem",
-                borderRadius: "15px",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
+              className={classes.model_detail}
             >
               <div>Design Clothes Caption</div>
               <div className="flex items-center justify-end">
@@ -48,11 +71,50 @@ function Grid() {
                   </Avatar>
                 </div>
               </div>
-            </div>
+            </motion.div>
+          </div>
+        </NavLink>
+      </div>
+      <div className={classes.grid_container}>
+        <NavLink to="/designer">
+          <div
+            className={classes.card_model}
+            style={{ marginBottom: "1rem", position: "relative" }}
+          >
+            <img src={img1} />
+
+            <motion.div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                backgroundColor: "#7E7E7E",
+                color: "white",
+                padding: "0.5rem",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
+                width: "100%",
+                fontFamily: "Roboto slab",
+              }}
+              className={classes.model_detail}
+            >
+              <div>Design Clothes Caption</div>
+              <div className="flex items-center justify-end">
+                <div className="mr-2">Profile Name</div>
+                <div>
+                  <Avatar>
+                    <AvatarImage src={img1} />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </NavLink>
         <NavLink to="/designer">
-          <div style={{ position: "relative" }}>
+          <div
+            className={classes.card_model}
+            style={{ marginBottom: "1rem", position: "relative" }}
+          >
             <img src={img2} />
             <div
               style={{
@@ -65,6 +127,7 @@ function Grid() {
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
+              className={classes.model_detail}
             >
               <div>Design Clothes Caption</div>
               <div className="flex items-center justify-end">
@@ -80,7 +143,10 @@ function Grid() {
           </div>
         </NavLink>
         <NavLink to="/designer">
-          <div style={{ position: "relative" }}>
+          <div
+            className={classes.card_model}
+            style={{ marginBottom: "1rem", position: "relative" }}
+          >
             <img src={img1} />
             <div
               style={{
@@ -93,6 +159,7 @@ function Grid() {
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
+              className={classes.model_detail}
             >
               <div>Design Clothes Caption</div>
               <div className="flex items-center justify-end">
@@ -147,7 +214,10 @@ function Grid() {
         </div>
 
         <NavLink to="/designer">
-          <div style={{ position: "relative" }}>
+          <div
+            className={classes.card_model}
+            style={{ marginBottom: "1rem", position: "relative" }}
+          >
             <img src={img2} />
             <div
               style={{
@@ -160,6 +230,7 @@ function Grid() {
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
+              className={classes.model_detail}
             >
               <div>Design Clothes Caption</div>
               <div className="flex items-center justify-end">
@@ -175,7 +246,10 @@ function Grid() {
           </div>
         </NavLink>
         <NavLink to="/designer">
-          <div style={{ position: "relative" }}>
+          <div
+            className={classes.card_model}
+            style={{ marginBottom: "1rem", position: "relative" }}
+          >
             <img src={img1} />
             <div
               style={{
@@ -188,6 +262,7 @@ function Grid() {
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
+              className={classes.model_detail}
             >
               <div>Design Clothes Caption</div>
               <div className="flex items-center justify-end">
@@ -203,7 +278,10 @@ function Grid() {
           </div>
         </NavLink>
         <NavLink to="/designer">
-          <div style={{ position: "relative" }}>
+          <div
+            className={classes.card_model}
+            style={{ marginBottom: "1rem", position: "relative" }}
+          >
             <img src={img2} />
             <div
               style={{
@@ -216,6 +294,7 @@ function Grid() {
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
+              className={classes.model_detail}
             >
               <div>Design Clothes Caption</div>
               <div className="flex items-center justify-end">
@@ -231,7 +310,10 @@ function Grid() {
           </div>
         </NavLink>
         <NavLink to="/designer">
-          <div style={{ position: "relative" }}>
+          <div
+            className={classes.card_model}
+            style={{ marginBottom: "1rem", position: "relative" }}
+          >
             <img src={img1} />
             <div
               style={{
@@ -244,6 +326,7 @@ function Grid() {
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
+              className={classes.model_detail}
             >
               <div>Design Clothes Caption</div>
               <div className="flex items-center justify-end">
@@ -259,7 +342,10 @@ function Grid() {
           </div>
         </NavLink>
         <NavLink to="/designer">
-          <div style={{ position: "relative" }}>
+          <div
+            className={classes.card_model}
+            style={{ marginBottom: "1rem", position: "relative" }}
+          >
             <img src={img2} />
             <div
               style={{
@@ -272,6 +358,7 @@ function Grid() {
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
+              className={classes.model_detail}
             >
               <div>Design Clothes Caption</div>
               <div className="flex items-center justify-end">
@@ -289,7 +376,7 @@ function Grid() {
       </div>
       <div
         style={{ backgroundColor: "#D6D6D6", width: "90%", margin: "auto" }}
-        className="flex flex-wrap py-8 px-4 "
+        className={`${classes.mb_grid_bottom} flex flex-wrap py-8 px-4 `}
       >
         <div
           style={{
@@ -299,18 +386,17 @@ function Grid() {
             padding: "calc(100% * 0.05)",
           }}
         >
-          Want to customize your Clothes ?{" "}
+          Want to customize your Clothes ?
         </div>
         <div style={{ width: "50%", margin: "auto" }}>
           <div
             style={{
-              fontSize: "1.5rem",
+              // fontSize: "1.5rem",
               fontWeight: 400,
-              //   width: "50%",
               padding: "calc(100% * 0.05)",
-              //   padding: "auto",
               margin: "auto",
             }}
+            className={classes.grid_bottom_detail}
           >
             Get clothes customized right for your size and feel, using our
             (customize tool name)

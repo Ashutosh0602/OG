@@ -2,6 +2,7 @@ import logo from "../../../assets/grid/ogPNG.png";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { TfiTwitter } from "react-icons/tfi";
 import { FaInstagram } from "react-icons/fa";
+import classes from "./Footer.module.css";
 
 function Footer() {
   return (
@@ -37,7 +38,7 @@ function Footer() {
           </div>
           <div
             style={{ width: "40%" }}
-            className="flex justify-around text-white"
+            className={`${classes.footer_feature} flex justify-around text-white`}
           >
             <div>
               <p style={{ fontWeight: 700 }}>Shop</p>

@@ -1,3 +1,6 @@
+.mb_homeSection {
+  margin-top: 5rem;
+}
 .text_button_container {
   width: calc(100vw * 0.4);
   display: flex;
@@ -17,7 +20,7 @@
   margin-bottom: 1rem;
   font-family: "Rufina";
   font-weight: 500;
-  color: #ff05c8;
+  /* color: #ff05c8; */
   letter-spacing: 0.05cm;
 }
 
@@ -76,5 +79,47 @@
   .p2 {
     font-size: 3rem;
     line-height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mb_homeSection {
+    margin-top: 0px !important;
+    height: 100vh !important;
+  }
+  .text_button_container {
+    /* display: block; */
+    width: 100vw;
+    height: 100vh;
+    padding: 0rem 1rem 0rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .text_button_container p {
+    font-weight: 800;
+    line-height: 3.5rem;
+  }
+  .p1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .mb_pDescription {
+    font-weight: 500 !important;
+    font-size: 1rem;
+  }
+  .mb_model {
+    display: block !important;
+    position: absolute;
+    /* height: 100vh; */
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .mb_model > img {
+    width: 100vw;
+    height: 120vh;
+    /* object-fit: fill; */
+  }
+  .model_container {
+    display: none;
   }
 }

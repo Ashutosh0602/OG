@@ -2,8 +2,11 @@ import logo from "../../assets/grid/OGlogo.png";
 import cart from "../../assets/grid/cart.svg";
 import { NavLink } from "react-router-dom";
 import { Command, CommandInput } from "@/components/ui/command";
+import classes from "./Navbar.module.css";
+import { useState } from "react";
 
 function Navbar() {
+  const [state, changeState] = useState("block");
   return (
     <nav className="bg-white  w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
@@ -11,33 +14,38 @@ function Navbar() {
           <img src={logo} className="h-12 ml-8" alt="OG Logo" />
         </a>
         <div className="flex items-end md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button className="m-auto">
-            <Command style={{ border: "1px solid black" }}>
-              <CommandInput placeholder="search..." />
-            </Command>
-          </button>
-          <NavLink to="/cart">
-            <button
-              style={{ marginLeft: "1rem", transform: "translate(0, 20%)" }}
-              className="m-auto"
-            >
-              <img src={cart} className="w-8 mr-8 m-auto" />
+          <div className={`${classes.mb_navbarSearch}`}>
+            <button className="m-auto">
+              <Command style={{ border: "1px solid black" }}>
+                <CommandInput placeholder="search..." />
+              </Command>
             </button>
-          </NavLink>
-          <NavLink to="/signIn">
-            <button
-              type="button"
-              className="text-black border-black border-2 bg-white hover:bg-black hover:text-white focus:ring-1 focus:outline-none focus:ring-black font-medium rounded text-sm px-8 py-2 text-center dark:bg-white dark:hover:bg-black dark:focus:ring-black"
-            >
-              Login
-            </button>
-          </NavLink>
+            <NavLink to="/cart">
+              <button
+                style={{ marginLeft: "1rem", transform: "translate(10%, 50%)" }}
+                className="m-auto"
+              >
+                <img src={cart} className="w-8 mr-8 m-auto" />
+              </button>
+            </NavLink>
+            <NavLink to="/signIn">
+              <button
+                type="button"
+                className="text-black border-black border-2 bg-white hover:bg-black hover:text-white focus:ring-1 focus:outline-none focus:ring-black font-medium rounded text-sm px-8 py-2 text-center dark:bg-white dark:hover:bg-black dark:focus:ring-black"
+              >
+                Login
+              </button>
+            </NavLink>
+          </div>
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-sticky"
             aria-expanded="false"
+            onClick={() =>
+              state == "block" ? changeState("none") : changeState("block")
+            }
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -58,14 +66,15 @@ function Navbar() {
           </button>
         </div>
         <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          style={{ display: state }}
+          className="items-center justify-between w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-700">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-700">
             <li>
               <a
                 href="#"
-                className=" py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-slate-600"
+                className=" py-2 px-3 text-black bg-white rounded hover:text-slate-600"
                 aria-current="page"
               >
                 <NavLink to="">Home</NavLink>
@@ -84,7 +93,7 @@ function Navbar() {
                 href="#"
                 className=" py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-slate-600"
               >
-                <NavLink to="customize">Customize</NavLink>
+                <NavLink to="select">Customize</NavLink>
               </a>
             </li>
             <li>

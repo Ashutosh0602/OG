@@ -15,11 +15,19 @@
   overflow: hidden;
   transition: all 0.4s linear;
 }
-.card_model:hover div,
-.card_model:hover div div {
-  /* background-color: aliceblue !important; */
-  /* transform-origin: bottom; */
-  /* visibility: visible; */
+.card_model {
+  transition: all 1s linear;
+}
+
+.model_detail {
+  height: 0px;
+  visibility: hidden;
+  /* transition: all 1s linear; */
+}
+
+.card_model:hover .model_detail {
+  height: auto;
+  visibility: visible;
 }
 .explore_button {
   background-color: black;
@@ -30,4 +38,29 @@
 
 .explore_button:hover {
   background-color: rgb(38, 38, 38);
+}
+
+@media only screen and (max-width: 500px) {
+  .mb_grid_container {
+    display: block !important;
+  }
+  .grid_container {
+    display: none;
+  }
+
+  .mb_grid_bottom {
+    display: block !important;
+    margin: 1rem !important;
+  }
+  .mb_grid_bottom > div:nth-child(1) {
+    width: 100% !important;
+    font-weight: 800;
+    font-size: 2.6rem !important;
+  }
+  .mb_grid_bottom div:nth-child(2) {
+    width: 100% !important;
+  }
+  .grid_bottom_detail {
+    font-size: 1.3rem !important;
+  }
 }

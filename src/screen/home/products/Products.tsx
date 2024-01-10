@@ -63,7 +63,42 @@ function Products() {
         <div>NEW ARRIVALS</div>
         <div>ACCESSORIES</div>
       </div>
-      <div className="flex flex-wrap justify-evenly my-16">
+
+      {/* //////// Mobile view ////////// */}
+
+      <div
+        className={classes.mb_productOne}
+        style={{ display: "none", cursor: "pointer", marginBottom: "5rem" }}
+      >
+        <div
+          style={{
+            //   backgroundColor: ls.color,
+            width: "20rem",
+            height: "25rem",
+            overflow: "hidden",
+            borderRadius: "1rem",
+          }}
+          className={classes.model_hover}
+        >
+          <img src={data[0].img} style={{ objectFit: "fill" }} />
+        </div>
+        <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+          <div style={{ textAlign: "center", fontWeight: "bold" }}>
+            {data[0].title}
+          </div>
+          <div className="flex justify-center">
+            <div style={{ fontWeight: 300 }}>₹{data[0].price}</div>
+            <div className="mx-8">|</div>
+            <div style={{ fontWeight: 300 }}>{data[0].rating}⭐️</div>
+          </div>
+        </div>
+      </div>
+
+      {/* ////////// */}
+
+      <div
+        className={`${classes.ds_productOne} flex flex-wrap justify-evenly my-16`}
+      >
         {data.map((ls) => {
           return (
             <div style={{ cursor: "pointer", marginBottom: "5rem" }}>

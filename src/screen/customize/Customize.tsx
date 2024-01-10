@@ -10,72 +10,96 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 function Customize() {
   const designe = [<Front />, <Back />, <Side />, <Aesthetics />];
   return (
-    <section className="my-32">
-      <div
-        style={{ marginTop: "4rem", marginBottom: "4rem", textAlign: "center" }}
-      >
+    <>
+      <motion.div
+        initial={{ height: "92vh" }}
+        animate={{ height: 0, transition: { duration: 1 } }}
+        exit={{
+          height: "92vh",
+          transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
+        }}
+        style={{
+          position: "absolute",
+          // top: 0,
+          bottom: 0,
+          width: "100%",
+          height: "0vh",
+          backgroundColor: "#202020",
+          zIndex: 100,
+        }}
+      ></motion.div>
+      <section className="my-32">
         <div
-          style={{ borderBottom: "2px solid gray", display: "inline-block" }}
+          style={{
+            marginTop: "4rem",
+            marginBottom: "4rem",
+            textAlign: "center",
+          }}
         >
-          <div className="mx-16" style={{ float: "right" }}>
-            Aesthtics
-          </div>
-          <div className="mx-16" style={{ float: "right" }}>
-            Back
-          </div>
-          <div className="mx-16" style={{ float: "right" }}>
-            Side
-          </div>
-          <div className="mx-16" style={{ float: "right" }}>
-            Front
+          <div
+            style={{ borderBottom: "2px solid gray", display: "inline-block" }}
+          >
+            <div className="mx-16" style={{ float: "right" }}>
+              Aesthtics
+            </div>
+            <div className="mx-16" style={{ float: "right" }}>
+              Back
+            </div>
+            <div className="mx-16" style={{ float: "right" }}>
+              Side
+            </div>
+            <div className="mx-16" style={{ float: "right" }}>
+              Front
+            </div>
           </div>
         </div>
-      </div>
-      <Carousel
-        // className="w-full max-w-xs"
-        style={{
-          margin: "auto auto",
-          width: "50rem",
-          //   height: "100vh",
-        }}
-      >
-        <CarouselPrevious />
-        <CarouselContent>
-          {designe.map((card, index) => (
-            <CarouselItem style={{ display: "flex" }} key={index}>
-              {card}
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselNext />
-      </Carousel>
-      <div style={{ textAlign: "center", marginTop: "3rem" }}>
-        <Button
+        <Carousel
+          // className="w-full max-w-xs"
           style={{
-            backgroundColor: "#FF5C00",
-            color: "black",
-            padding: "2rem",
-            marginRight: "2rem",
+            margin: "auto auto",
+            width: "50rem",
+            //   height: "100vh",
           }}
         >
-          CheckOut
-        </Button>
-        <Button
-          style={{
-            backgroundColor: "#A3A3A3",
-            color: "black",
-            padding: "2rem",
-            marginLeft: "2rem",
-          }}
-        >
-          Add to Cart
-        </Button>
-      </div>
-    </section>
+          <CarouselPrevious />
+          <CarouselContent>
+            {designe.map((card, index) => (
+              <CarouselItem style={{ display: "flex" }} key={index}>
+                {card}
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselNext />
+        </Carousel>
+        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <Button
+            style={{
+              backgroundColor: "#FF5C00",
+              color: "black",
+              padding: "2rem",
+              marginRight: "2rem",
+            }}
+          >
+            CheckOut
+          </Button>
+          <Button
+            style={{
+              backgroundColor: "#A3A3A3",
+              color: "black",
+              padding: "2rem",
+              marginLeft: "2rem",
+            }}
+          >
+            Add to Cart
+          </Button>
+        </div>
+      </section>
+    </>
   );
 }
 

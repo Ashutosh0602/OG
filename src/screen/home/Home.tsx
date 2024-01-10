@@ -17,18 +17,69 @@ import { motion } from "framer-motion";
 function Home() {
   return (
     <>
+      <motion.div
+        initial={{ height: "92vh" }}
+        animate={{ height: 0, transition: { duration: 1 } }}
+        exit={{
+          height: "92vh",
+          transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
+        }}
+        style={{
+          position: "absolute",
+          // top: 0,
+          bottom: 0,
+          width: "100%",
+          height: "0vh",
+          backgroundColor: "#202020",
+          zIndex: 100,
+        }}
+      >
+        {/* <img src={logo} /> */}
+      </motion.div>
       <section
         style={{ height: "80vh" }}
-        className="flex flex-wrap justify-around mt-20 mb-16 overflow-hidden relative"
+        className={`${classes.mb_homeSection} flex flex-wrap justify-around  mb-16 overflow-hidden relative`}
       >
         <div className={classes.text_button_container}>
-          <div>
-            <div>
-              <p className={classes.p1}>Customize Your Clothes and</p>
-              <p className={classes.p2}>Express Your Style</p>
+          <div style={{ position: "relative" }}>
+            <div style={{ display: "none" }} className={classes.mb_model}>
+              <img src={model_svg} />
             </div>
             <div>
-              <p>Discover endless possibilities for your style.</p>
+              <p className={classes.p1}>Customize Your Clothes and</p>
+              <div>
+                <Swiper
+                  spaceBetween={30}
+                  centeredSlides={true}
+                  freeMode={true}
+                  speed={1000}
+                  autoplay={{
+                    delay: 2500,
+                    waitForTransition: true,
+                    stopOnLastSlide: true,
+                    disableOnInteraction: false,
+                  }}
+                  navigation={false}
+                  modules={[Autoplay]}
+                  className={classes.mySwiper}
+                >
+                  <SwiperSlide>
+                    <p style={{ color: "#ff05c8" }} className={classes.p2}>
+                      Express Your Style
+                    </p>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <p style={{ color: "#DA9F3F" }} className={classes.p2}>
+                      Wear Your Design
+                    </p>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+            <div>
+              <p className={classes.mb_pDescription}>
+                Discover endless possibilities for your style.
+              </p>
             </div>
           </div>
         </div>
@@ -43,7 +94,7 @@ function Home() {
               freeMode={true}
               speed={1000}
               autoplay={{
-                delay: 1000,
+                delay: 2500,
                 waitForTransition: true,
                 stopOnLastSlide: true,
                 disableOnInteraction: false,
@@ -74,7 +125,7 @@ function Home() {
               x: "100%",
               y: ["0rem", "3rem", "0rem"],
             }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 2.5 }}
           >
             <img src={dotted} className={classes.dotted_bottom} />
           </motion.div>
@@ -85,7 +136,7 @@ function Home() {
                 x: "-34vw",
                 y: ["0rem", "-3rem", "0rem"],
               }}
-              transition={{ duration: 0.7, ease: "easeOut", delay: 1 }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 2.5 }}
               src={dotted}
               className={classes.dotted_up}
             />
