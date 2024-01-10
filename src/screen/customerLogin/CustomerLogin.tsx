@@ -63,7 +63,7 @@ const invoices = [
   },
 ];
 
-const screen = window.screen.width;
+// const screen = window.screen.width;
 
 function CustomerLogin() {
   return (

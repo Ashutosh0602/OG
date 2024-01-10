@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import classes from "./Product.module.css";
+// import classes from "./Product.module.css";
 // const data = [
 //   {
 //     img: product,

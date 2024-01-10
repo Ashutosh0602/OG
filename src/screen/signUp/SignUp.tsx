@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import { NavLink } from "react-router-dom";
 import { ImGoogle2 } from "react-icons/im";
 import { motion } from "framer-motion";
-import classes from "./SignUp.module.css";
+// import classes from "./SignUp.module.css";
 
 const screen = window.screen.width;
 
