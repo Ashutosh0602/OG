@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 import { NavLink } from "react-router-dom";
 import { ImGoogle2 } from "react-icons/im";
 import { motion } from "framer-motion";
+import classes from "./SignUp.module.css";
 
 function SignUp() {
   return (
@@ -23,6 +24,7 @@ function SignUp() {
           height: "92vh",
           transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
         }}
+        className={classes.stop_motion}
         style={{
           position: "absolute",
           // top: 0,
@@ -89,7 +91,7 @@ function SignUp() {
             </p>
           </Card>
         </div>
-      </div>{" "}
+      </div>
     </>
   );
 }

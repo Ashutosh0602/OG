@@ -6,3 +6,9 @@
 .model_hover > img {
   transition: all linear 0.4s;
 }
+
+@media only screen and (max-width: 500px) {
+  .stop_motion {
+    display: none;
+  }
+}

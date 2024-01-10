@@ -75,6 +75,7 @@ function Collection(): any {
           height: "92vh",
           transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
         }}
+        className={classes.stop_motion}
         style={{
           position: "absolute",
           // top: 0,

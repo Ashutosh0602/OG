@@ -14,6 +14,7 @@ import { NavLink } from "react-router-dom";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import classes from "./SignIn.module.css";
 
 function SignIn() {
   const [userType, setUserType] = useState("");
@@ -26,6 +27,7 @@ function SignIn() {
           height: "92vh",
           transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
         }}
+        className={classes.stop_motion}
         style={{
           position: "absolute",
           // top: 0,

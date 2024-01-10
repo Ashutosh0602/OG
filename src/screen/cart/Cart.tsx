@@ -11,6 +11,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { motion } from "framer-motion";
+import classes from "./Cart.module.css";
 
 function Cart() {
   return (
@@ -22,6 +23,7 @@ function Cart() {
           height: "92vh",
           transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
         }}
+        className={classes.stop_motion}
         style={{
           position: "absolute",
           // top: 0,

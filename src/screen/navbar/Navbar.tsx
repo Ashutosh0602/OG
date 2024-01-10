@@ -4,9 +4,17 @@ import { NavLink } from "react-router-dom";
 import { Command, CommandInput } from "@/components/ui/command";
 import classes from "./Navbar.module.css";
 import { useState } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 function Navbar() {
-  const [state, changeState] = useState("block");
+  // const [state, changeState] = useState("block");
   return (
     <nav className="bg-white  w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
@@ -37,36 +45,71 @@ function Navbar() {
               </button>
             </NavLink>
           </div>
-          <button
-            data-collapse-toggle="navbar-sticky"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
-            onClick={() =>
-              state == "block" ? changeState("none") : changeState("block")
-            }
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+          <Sheet>
+            <SheetTrigger>
+              <button
+                data-collapse-toggle="navbar-sticky"
+                type="button"
+                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-sticky"
+                aria-expanded="false"
+                // onClick={() =>
+                //   state == "block" ? changeState("none") : changeState("block")
+                // }
+              >
+                <span className="sr-only">Open main menu</span>
+                <svg
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 17 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15"
+                  />
+                </svg>
+              </button>
+            </SheetTrigger>
+            <SheetContent style={{ height: "50vh" }}>
+              <SheetHeader>
+                <SheetTitle>
+                  <h1>
+                    <NavLink to="">Home</NavLink>
+                  </h1>
+                </SheetTitle>
+                <SheetTitle>
+                  <h1>
+                    <NavLink to="/shop">Shop</NavLink>
+                  </h1>
+                </SheetTitle>
+                <SheetTitle>
+                  <h1>
+                    <NavLink to="/select">Customize</NavLink>
+                  </h1>
+                </SheetTitle>
+                <SheetTitle>
+                  <h1>
+                    <NavLink to="/cart">Cart</NavLink>
+                  </h1>
+                </SheetTitle>
+                <SheetTitle>
+                  <button className="m-auto">
+                    <Command style={{ border: "1px solid black" }}>
+                      <CommandInput placeholder="search..." />
+                    </Command>
+                  </button>
+                </SheetTitle>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
         </div>
         <div
-          style={{ display: state }}
+          // style={{ display: state }}
           className={`${classes.mb_navbar} items-center justify-between w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >

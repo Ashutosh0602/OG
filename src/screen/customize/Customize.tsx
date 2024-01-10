@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import classes from "./Customize.module.css";
 
 function Customize() {
   const designe = [<Front />, <Back />, <Side />, <Aesthetics />];
@@ -23,6 +24,7 @@ function Customize() {
           height: "92vh",
           transition: { delay: 0.5, duration: 1, ease: "easeInOut" },
         }}
+        className={classes.stop_motion}
         style={{
           position: "absolute",
           // top: 0,
