@@ -97,6 +97,11 @@ function Navbar() {
                   </h1>
                 </SheetTitle>
                 <SheetTitle>
+                  <h1>
+                    <NavLink to="/signIn">Login</NavLink>
+                  </h1>
+                </SheetTitle>
+                <SheetTitle>
                   <button className="m-auto">
                     <Command style={{ border: "1px solid black" }}>
                       <CommandInput placeholder="search..." />
