@@ -2,4 +2,7 @@
   .stop_motion {
     display: none;
   }
+  .access_padd {
+    margin: 16px !important;
+  }
 }

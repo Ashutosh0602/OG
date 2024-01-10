@@ -61,7 +61,10 @@ function DesignerLogin() {
       >
         <div>
           <Skeleton className="w-full p-8">
-            <Avatar style={{ width: "10rem", height: "10rem" }}>
+            <Avatar
+              className={classes.designer_avatar}
+              style={{ width: "10rem", height: "10rem" }}
+            >
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
@@ -71,7 +74,10 @@ function DesignerLogin() {
           <div style={{ fontSize: "1.25rem", fontWeight: 600 }}>
             Anjali Dubey
           </div>
-          <div style={{ width: "calc(60%)" }}>
+          <div
+            className={classes.designer_detail}
+            style={{ width: "calc(60%)" }}
+          >
             Hi, I'm Anjali Dubey, a passionate and imaginative designer weaving
             stories through visuals. With a natural inclination for aesthetics
             and meticulous attention to detail, I bring ideas to life in the

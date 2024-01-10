@@ -35,7 +35,7 @@ function Customize() {
           zIndex: 100,
         }}
       ></motion.div>
-      <section className="my-32">
+      <section className="my-16">
         <div
           style={{
             marginTop: "4rem",
@@ -46,22 +46,34 @@ function Customize() {
           <div
             style={{ borderBottom: "2px solid gray", display: "inline-block" }}
           >
-            <div className="mx-16" style={{ float: "right" }}>
+            <div
+              className={`${classes.access_padd} mx-16`}
+              style={{ float: "right" }}
+            >
               Aesthtics
             </div>
-            <div className="mx-16" style={{ float: "right" }}>
+            <div
+              className={`${classes.access_padd} mx-16`}
+              style={{ float: "right" }}
+            >
               Back
             </div>
-            <div className="mx-16" style={{ float: "right" }}>
+            <div
+              className={`${classes.access_padd} mx-16`}
+              style={{ float: "right" }}
+            >
               Side
             </div>
-            <div className="mx-16" style={{ float: "right" }}>
+            <div
+              className={`${classes.access_padd} mx-16`}
+              style={{ float: "right" }}
+            >
               Front
             </div>
           </div>
         </div>
         <Carousel
-          // className="w-full max-w-xs"
+          className=" max-w-xs"
           style={{
             margin: "auto auto",
             width: "50rem",

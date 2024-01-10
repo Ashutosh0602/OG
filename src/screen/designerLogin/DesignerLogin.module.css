@@ -11,4 +11,11 @@
   .stop_motion {
     display: none;
   }
+  .designer_detail {
+    width: 100% !important;
+  }
+  .designer_avatar {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
 }

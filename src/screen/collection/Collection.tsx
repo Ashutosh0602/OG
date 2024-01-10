@@ -105,19 +105,19 @@ function Collection(): any {
         >
           <div style={{ display: "inline-block" }}>
             <div
-              className="mx-16"
+              className={`${classes.access_padd} mx-16`}
               style={{ cursor: "pointer", float: "right" }}
             >
               Accessories
             </div>
             <div
-              className="mx-16"
+              className={`${classes.access_padd} mx-16`}
               style={{ cursor: "pointer", float: "right" }}
             >
               Mens
             </div>
             <div
-              className="mx-16"
+              className={`${classes.access_padd} mx-16`}
               style={{ cursor: "pointer", float: "right" }}
             >
               Womens
