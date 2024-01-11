@@ -46,7 +46,8 @@ function Home() {
           );
         }
       }}
-      <section
+      <motion.section
+        // exit={{ opacity: 0, transition: { duration: 1 } }}
         style={{ height: "80vh" }}
         className={`${classes.mb_homeSection} flex flex-wrap justify-around  mb-16 overflow-hidden relative`}
       >
@@ -152,7 +153,7 @@ function Home() {
             />
           </motion.div>
         </div>
-      </section>
+      </motion.section>
       <div
         style={{
           position: "relative",

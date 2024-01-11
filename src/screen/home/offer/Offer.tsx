@@ -4,9 +4,12 @@ import dotted from "../../../assets/grid/dottedOffer.svg";
 
 function Offer() {
   return (
-    <section className="flex flex-wrap justify-center place-items-center my-32">
+    <section className="flex flex-wrap relative justify-center place-items-center my-32">
       <div className={classes.offer_container}>
-        <div style={{ position: "relative", zIndex: 1 }}>
+        <div
+          className={classes.des_offer_model}
+          style={{ position: "relative", zIndex: 1 }}
+        >
           <img
             style={{ width: "20rem", objectFit: "cover", height: "100%" }}
             src={offerModel}
@@ -19,7 +22,7 @@ function Offer() {
           <div
             style={{
               fontFamily: "Poppins",
-              fontSize: "4rem",
+              fontSize: "3rem",
               fontWeight: "bold",
             }}
           >

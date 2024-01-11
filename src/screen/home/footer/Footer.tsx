@@ -6,7 +6,10 @@ import classes from "./Footer.module.css";
 
 function Footer() {
   return (
-    <section className="mt-32 py-32" style={{ backgroundColor: "#202020" }}>
+    <section
+      className={`${classes.footer_section} mt-32 py-32`}
+      style={{ backgroundColor: "#202020" }}
+    >
       <div className="flex flex-wrap justify-around">
         <div style={{ width: "50%" }} className="flex flex-wrap justify-around">
           <div>
@@ -83,7 +86,7 @@ function Footer() {
                 border: "2px white solid",
                 cursor: "pointer",
               }}
-              className=""
+              className={classes.submit_footer}
             >
               SUBMIT
             </span>

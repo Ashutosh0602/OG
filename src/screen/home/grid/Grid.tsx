@@ -4,7 +4,22 @@ import classes from "./Grid.module.css";
 import { NavLink } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 function Grid() {
+  const modelPack: any = useRef();
+  const [width, setWidth] = useState<number>(0);
+  useEffect(() => {
+    const width = modelPack.current.clientWidth;
+    setWidth(width);
+    // Do something with the width
+  }, []);
+
   return (
     <section className="my-32">
       <div
@@ -21,42 +36,103 @@ function Grid() {
         Immerse yourself in the world of luxury fashion with our meticulously
         crafted designer clothes!
       </div>
+
+      {/* //////// Mobile View //////// */}
       <div style={{ display: "none" }} className={classes.mb_grid_container}>
-        <div
-          style={{
-            textAlign: "center",
-            backgroundColor: "#B6B9B7",
-            paddingTop: "1rem",
-            paddingBottom: "1rem",
-            borderRadius: "15px",
-            margin: "0.5rem 1rem 0.5rem 1rem",
-            // marginTop: "0.5rem",
-            // marginBottom: "0.5rem",
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          freeMode={false}
+          speed={1000}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            waitForTransition: true,
+            // stopOnLastSlide: false,
+            // disableOnInteraction: false,
           }}
+          navigation={false}
+          modules={[Autoplay]}
+          className={classes.mySwiper}
         >
-          Latest
-        </div>
+          <SwiperSlide>
+            <div
+              style={{
+                textAlign: "center",
+                backgroundColor: "#E3E3E3",
+                paddingTop: "1rem",
+                paddingBottom: "1rem",
+                borderRadius: "15px",
+                margin: "0.5rem 1rem 0.5rem 1rem",
+                // marginTop: "0.5rem",
+                // marginBottom: "0.5rem",
+              }}
+            >
+              Latest
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              style={{
+                textAlign: "center",
+                backgroundColor: "#B6B9B7",
+                paddingTop: "1rem",
+                paddingBottom: "1rem",
+                borderRadius: "15px",
+                margin: "0.5rem 1rem 0.5rem 1rem",
+
+                // marginTop: "0.5rem",
+                // marginBottom: "0.5rem",
+              }}
+            >
+              Unique
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              style={{
+                textAlign: "center",
+                backgroundColor: "#000000",
+                paddingTop: "1rem",
+                paddingBottom: "1rem",
+                color: "white",
+                borderRadius: "15px",
+                margin: "0.5rem 1rem 0.5rem 1rem",
+              }}
+            >
+              Relatables
+            </div>
+          </SwiperSlide>
+        </Swiper>
         <NavLink to="/designer">
           <div
             className={classes.card_model}
+            // onTouchMove={() =>
+            //   setWidth(modelPack.current.getBoundingClientRect().width)
+            // }
+            ref={modelPack}
             style={{
               marginBottom: "1rem",
               position: "relative",
               padding: "1rem",
             }}
           >
-            <img src={img1} />
+            <div>
+              <img src={img1} />
+            </div>
 
-            <motion.div
+            <div
               style={{
                 position: "absolute",
                 bottom: 0,
+                // left: 0,
                 backgroundColor: "#7E7E7E",
                 color: "white",
                 padding: "0.5rem",
                 borderBottomLeftRadius: "15px",
                 borderBottomRightRadius: "15px",
-                width: "100%",
+                // width: "430px",
+                width: `${width - 32}px`,
                 fontFamily: "Roboto slab",
               }}
               className={classes.model_detail}
@@ -71,10 +147,12 @@ function Grid() {
                   </Avatar>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </NavLink>
       </div>
+      {/* //////////////////// */}
+
       <div className={classes.grid_container}>
         <NavLink to="/designer">
           <div
