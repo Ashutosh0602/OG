@@ -11,4 +11,13 @@
   .stop_motion {
     display: none;
   }
+  .mb_productImage {
+    height: auto !important;
+  }
+  .mb_product_descriptionflex {
+    width: 100% !important;
+  }
+  .mb_product_button {
+    width: 100% !important;
+  }
 }

@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-// import classes from "./Product.module.css";
+import classes from "./Product.module.css";
 // const data = [
 //   {
 //     img: product,
@@ -71,11 +71,12 @@ function Product(prop: any) {
               overflow: "hidden",
               objectFit: "cover",
             }}
+            className={classes.mb_productImage}
           >
             <img style={{ margin: "auto" }} src={state.img} />
           </div>
           <div
-            className="flex flex-col place-content-evenly	"
+            className={`${classes.mb_product_descriptionflex} flex-col place-content-evenly	`}
             style={{ width: "50%", paddingLeft: "calc(100% * 0.08)" }}
           >
             <div
@@ -116,13 +117,14 @@ function Product(prop: any) {
                 {state.rating}⭐️
               </div>
             </div>
-            <div>
+            <div className="mt-6">
               <Button
                 style={{
                   padding: "1rem 3rem 1rem 3rem",
                   marginRight: "2rem",
                   marginBottom: "1rem",
                 }}
+                className={classes.mb_product_button}
               >
                 Buy Now
               </Button>
@@ -133,6 +135,7 @@ function Product(prop: any) {
                   border: "1px solid black",
                   padding: "1rem 2rem 1rem 2rem",
                 }}
+                className={classes.mb_product_button}
               >
                 Add to Cart
               </Button>
