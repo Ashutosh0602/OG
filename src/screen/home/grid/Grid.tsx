@@ -21,7 +21,7 @@ function Grid() {
   }, []);
 
   return (
-    <section className="my-32">
+    <section className="my-16">
       <div
         style={{
           textAlign: "center",

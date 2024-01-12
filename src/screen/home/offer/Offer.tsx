@@ -4,7 +4,7 @@ import dotted from "../../../assets/grid/dottedOffer.svg";
 
 function Offer() {
   return (
-    <section className="flex flex-wrap relative justify-center place-items-center my-32">
+    <section className="flex flex-wrap relative justify-center place-items-center my-16">
       <div className={classes.offer_container}>
         <div
           className={classes.des_offer_model}

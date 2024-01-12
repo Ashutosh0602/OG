@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  position: relative;
 }
 .p1 {
   font-size: 5rem;
@@ -27,8 +28,8 @@
 .explore_button_container {
   /* margin-top: 20rem; */
   position: absolute;
-  bottom: 20%;
-  left: 7%;
+  bottom: 0%;
+  left: 2%;
 }
 .explore_button {
   background-color: black;
@@ -90,13 +91,21 @@
   .text_button_container {
     /* display: block; */
     width: 100vw;
-    height: 150vh !important;
+    /* height: 150vh !important; */
     padding: 0rem 1rem 0rem 1rem;
     background-color: rgba(255, 255, 255, 0.5);
   }
+  .explore_button_container {
+    position: absolute;
+    bottom: 20%;
+    z-index: 100;
+    left: 7%;
+  }
+
   .text_button_container p {
     font-weight: 800;
     line-height: 3.5rem;
+    position: relative;
   }
   .p1 {
     margin-top: 2rem;

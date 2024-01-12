@@ -356,16 +356,21 @@ function Collection(): any {
             </SheetHeader>
           </SheetContent>
         </Sheet>
-        <div className="flex flex-wrap justify-evenly my-16">
+        <div className="flex flex-wrap justify-evenly shrink-0 basis-auto my-16">
+          {/* <div className={`${classes.product_container} my-16`}> */}
           {data.map((ls) => {
             return (
-              <NavLink to="/productPage" state={ls}>
-                <div
-                  style={{ cursor: "pointer", margin: "1rem 1rem 1rem 1rem" }}
-                  onClick={() => {
-                    return <Product data={ls} key="hvjuh" />;
-                  }}
-                >
+              <div
+                style={{
+                  cursor: "pointer",
+                  margin: "1rem 1rem 1rem 1rem",
+                }}
+                className={classes.model_hover_container}
+                onClick={() => {
+                  return <Product data={ls} key="hvjuh" />;
+                }}
+              >
+                <NavLink to="/productPage" state={ls}>
                   <div
                     style={{
                       backgroundColor: ls.color,
@@ -388,8 +393,8 @@ function Collection(): any {
                       <div style={{ fontWeight: 300 }}>{ls.rating}⭐️</div>
                     </div>
                   </div>
-                </div>
-              </NavLink>
+                </NavLink>
+              </div>
             );
           })}
         </div>

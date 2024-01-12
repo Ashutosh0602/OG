@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import man from "../../../assets/grid/customModel.png";
 import {
   ContextMenu,
@@ -7,6 +8,8 @@ import {
 } from "@/components/ui/context-menu";
 
 const Front = () => {
+  const ref: any = useRef();
+  // document.addEventListener("contextmenu", (e) => ref.currnet.click());
   return (
     <div style={{ margin: "auto auto", position: "relative" }}>
       <img useMap="#work" src={man} style={{ position: "relative" }} />
@@ -33,8 +36,16 @@ const Front = () => {
         }}
         id="jacket"
       >
-        <ContextMenu>
+        <ContextMenu modal={true}>
           <ContextMenuTrigger
+            ref={ref}
+            onMouseDown={(e) => {
+              console.log(ref.current);
+              if (e.button == 2) {
+                ref.current.click("ContextMenu");
+              }
+            }}
+            onContextMenu={(e) => console.log(e.button, "asfs")}
             style={{
               width: "25px",
               height: "25px",

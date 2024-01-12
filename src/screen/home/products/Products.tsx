@@ -53,7 +53,7 @@ const data = [
 
 function Products() {
   return (
-    <section className="my-32">
+    <section className="my-16">
       <div style={{ textAlign: "center", fontSize: "3rem", fontWeight: 600 }}>
         Our Products
       </div>

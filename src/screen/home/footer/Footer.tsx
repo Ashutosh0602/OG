@@ -40,7 +40,7 @@ function Footer() {
             </div>
           </div>
           <div
-            style={{ width: "40%" }}
+            style={{ width: "40%", fontFamily: "poppins" }}
             className={`${classes.footer_feature} flex justify-around text-white`}
           >
             <div>

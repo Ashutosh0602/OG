@@ -48,8 +48,8 @@ function Home() {
       }}
       <motion.section
         // exit={{ opacity: 0, transition: { duration: 1 } }}
-        style={{ height: "80vh" }}
-        className={`${classes.mb_homeSection} flex flex-wrap justify-around  mb-16 overflow-hidden relative`}
+        style={{ height: "auto" }}
+        className={`${classes.mb_homeSection} flex flex-wrap justify-around  mb-12 overflow-hidden`}
       >
         <div className={classes.text_button_container}>
           <div style={{ position: "relative" }}>
@@ -93,9 +93,9 @@ function Home() {
               </p>
             </div>
           </div>
-        </div>
-        <div className={classes.explore_button_container}>
-          <button className={classes.explore_button}>Explore Now</button>
+          <div className={classes.explore_button_container}>
+            <button className={classes.explore_button}>Explore Now</button>
+          </div>
         </div>
         <div className={classes.model_container}>
           <div className={classes.model_img_div}>
