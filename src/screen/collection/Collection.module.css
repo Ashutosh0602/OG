@@ -2,9 +2,6 @@
   transform: scale(1.05);
   transition: all linear 0.2s;
 }
-.model_hover_container {
-  /* margin: 0 0 2rem 0 !important; */
-}
 .model_hover > img {
   transition: all linear 0.4s;
 }
