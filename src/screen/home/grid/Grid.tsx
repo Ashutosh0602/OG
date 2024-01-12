@@ -425,7 +425,7 @@ function Grid() {
             style={{ marginBottom: "1rem", position: "relative" }}
           >
             <img src={img2} />
-            <div
+            {/* <div
               style={{
                 position: "absolute",
                 bottom: 0,
@@ -448,7 +448,7 @@ function Grid() {
                   </Avatar>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </NavLink>
       </div>

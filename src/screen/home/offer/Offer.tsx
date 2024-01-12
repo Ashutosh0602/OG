@@ -22,13 +22,13 @@ function Offer() {
           <div
             style={{
               fontFamily: "Poppins",
-              fontSize: "3rem",
-              fontWeight: "bold",
+              fontSize: "2.5rem",
+              fontWeight: 900,
             }}
           >
             Exclusive offer
           </div>
-          <div style={{ fontSize: "1.2rem", lineHeight: "120%" }}>
+          <div style={{ fontSize: "1rem", lineHeight: "120%" }}>
             Unlock the ultimate style upgrade with our exclusive offer Enjoy
             savings of up to 40% off on our latest New Arrivals
           </div>

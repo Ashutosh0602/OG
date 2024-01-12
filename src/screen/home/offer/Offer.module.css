@@ -19,18 +19,23 @@
 .offer_timer {
   width: 4rem;
   height: 4rem;
-  text-align: center;
-  line-height: 120%;
-  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  /* line-height: 100%; */
+  /* vertical-align: middle; */
   background-color: whitesmoke;
 }
 
 .offer_timer > div {
   font-size: 1rem;
-  transform: translate(0%, 50%);
+  /* transform: translate(0%, 50%); */
 }
 .offer_timer > div:nth-child(1) {
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .dotted_div {
@@ -65,8 +70,6 @@
     background-color: #d6d6d6;
     z-index: 10;
     padding: 0 1rem 1rem 1rem;
-    /* border-radius: 1rem; */
-    /* font-size: 2rem !important; */
   }
 
   .des_offer_model {

@@ -10,6 +10,8 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
+import classes from "./CustomerLogin.module.css";
+import { useState } from "react";
 
 const invoices = [
   {
@@ -63,24 +65,48 @@ const invoices = [
   },
 ];
 
-// const screen = window.screen.width;
+const screen = window.screen.width;
+let table = 4;
 
+if (screen < 500) {
+  table = 2;
+}
 function CustomerLogin() {
+  // const [table, setTable] = useState(4);
+
   return (
     <div>
-      <div className="flex justify-around items-center px-16 py-20">
+      <div className="flex justify-around items-center px-16 py-20 overflow-hidden">
         <div>
-          <Avatar style={{ width: "10rem", height: "10rem" }}>
+          <Avatar
+            className={classes.cusotmer_avatar}
+            style={{ width: "10rem", height: "10rem" }}
+          >
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
-        <div className="space-y-2">
-          <Skeleton className="h-4 w-[250px]" />
-          <Skeleton className="h-4 w-[400px]" />
-          <Skeleton className="h-4 w-[450px]" />
-          <Skeleton className="h-4 w-[420px]" />
-          <Skeleton className="h-4 w-[400px]" />
+        <div>
+          <div
+            style={{ display: "block" }}
+            className={`${classes.des_customer_skeleton} space-y-2`}
+          >
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[400px]" />
+            <Skeleton className="h-4 w-[450px]" />
+            <Skeleton className="h-4 w-[420px]" />
+            <Skeleton className="h-4 w-[400px]" />
+          </div>
+          <div
+            style={{ display: "none" }}
+            className={`${classes.mb_customer_skeleton} space-y-2`}
+          >
+            <Skeleton className="h-4 w-[150px]" />
+            <Skeleton className="h-4 w-[200px]" />
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[220px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
         </div>
       </div>
       <Separator
@@ -96,10 +122,20 @@ function CustomerLogin() {
             {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[100px]">Invoice</TableHead>
-                <TableHead>Status</TableHead>
+                <TableHead>Invoice</TableHead>
+                <TableHead
+                  className={classes.mb_payment}
+                  style={{ display: "block" }}
+                >
+                  Status
+                </TableHead>
                 <TableHead>Item</TableHead>
-                <TableHead>Method</TableHead>
+                <TableHead
+                  className={classes.mb_payment}
+                  style={{ display: "block" }}
+                >
+                  Method
+                </TableHead>
                 <TableHead className="text-right">Amount</TableHead>
               </TableRow>
             </TableHeader>
@@ -109,9 +145,19 @@ function CustomerLogin() {
                   <TableCell className="font-medium">
                     {invoice.invoice}
                   </TableCell>
-                  <TableCell>{invoice.paymentStatus}</TableCell>
+                  <TableCell
+                    className={classes.mb_payment}
+                    style={{ display: "block" }}
+                  >
+                    {invoice.paymentStatus}
+                  </TableCell>
                   <TableCell>{invoice.item}</TableCell>
-                  <TableCell>{invoice.paymentMethod}</TableCell>
+                  <TableCell
+                    className={classes.mb_payment}
+                    style={{ display: "block" }}
+                  >
+                    {invoice.paymentMethod}
+                  </TableCell>
                   <TableCell className="text-right">
                     {invoice.totalAmount}
                   </TableCell>
@@ -120,7 +166,7 @@ function CustomerLogin() {
             </TableBody>
             <TableFooter>
               <TableRow>
-                <TableCell colSpan={4}>Total</TableCell>
+                <TableCell colSpan={table}>Total</TableCell>
                 <TableCell className="text-right">$2,500.00</TableCell>
               </TableRow>
             </TableFooter>

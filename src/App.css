@@ -2,7 +2,7 @@
 
 body {
   width: 100vw;
-  scroll-behavior: smooth;
+  scroll-behavior: calc(100vh * 10%);
   /* overflow: hidden; */
 }
 @media only screen and (max-width: 1000px) {
