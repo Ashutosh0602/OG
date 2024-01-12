@@ -11,7 +11,6 @@ import { Separator } from "@/components/ui/separator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Skeleton } from "@/components/ui/skeleton";
 import classes from "./CustomerLogin.module.css";
-import { useState } from "react";
 
 const invoices = [
   {
