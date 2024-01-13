@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
+// import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { NavLink } from "react-router-dom";
@@ -85,13 +85,16 @@ function SignIn() {
                 </Tabs>
               </div>
               <div className="flex items-center space-x-2">
-                <Checkbox id="terms" />
+                <span className="text-xs text-blue-600 hover:underline">
+                  Forgot Password
+                </span>
+                {/* <Checkbox id="terms" />
                 <label
                   htmlFor="terms"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
                   Remember me
-                </label>
+                </label> */}
               </div>
             </CardContent>
             <CardFooter className="flex flex-col">

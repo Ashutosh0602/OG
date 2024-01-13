@@ -1,3 +1,12 @@
+.categories:hover {
+  background-color: white !important;
+  padding: 0 !important;
+  color: slategrey;
+}
+.categories {
+  transform: translateY(-20%);
+  font-size: 1rem !important;
+}
 @media only screen and (max-width: 500px) {
   .mb_navbarSearch {
     display: none;

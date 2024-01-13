@@ -40,21 +40,35 @@ function Footer() {
             </div>
           </div>
           <div
-            style={{ width: "40%", fontFamily: "poppins" }}
+            style={{ width: "40%", fontFamily: "poppin" }}
             className={`${classes.footer_feature} flex justify-around text-white`}
           >
             <div>
-              <p style={{ fontWeight: 700 }}>Shop</p>
-              <p>Products</p>
-              <p>Overview</p>
-              <p>Releases</p>
+              <p
+                style={{ fontWeight: 900, fontFamily: "Roboto Slab" }}
+                className="py-1"
+              >
+                Shop
+              </p>
+              <div style={{ fontWeight: 400, fontFamily: "poppins" }}>
+                <p className="py-1">Products</p>
+                <p className="py-1">Overview</p>
+                <p className="py-1">Releases</p>
+              </div>
             </div>
             <div>
-              <p style={{ fontWeight: 700 }}>Company</p>
-              <p>About Us</p>
-              <p>Contact</p>
-              <p>News</p>
-              <p>Support</p>
+              <p
+                className="py-1"
+                style={{ fontWeight: 700, fontFamily: "Roboto Slab" }}
+              >
+                Company
+              </p>
+              <div style={{ fontWeight: 400, fontFamily: "poppins" }}>
+                <p className="py-1">About Us</p>
+                <p className="py-1">Contact</p>
+                <p className="py-1">News</p>
+                <p className="py-1">Support</p>
+              </div>
             </div>
           </div>
         </div>

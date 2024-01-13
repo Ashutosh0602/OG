@@ -1,15 +1,14 @@
-import { useRef } from "react";
 import man from "../../../assets/grid/customModel.png";
 import {
-  ContextMenu,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuTrigger,
-} from "@/components/ui/context-menu";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Front = () => {
-  const ref: any = useRef();
-  // document.addEventListener("contextmenu", (e) => ref.currnet.click());
   return (
     <div style={{ margin: "auto auto", position: "relative" }}>
       <img useMap="#work" src={man} style={{ position: "relative" }} />
@@ -36,16 +35,8 @@ const Front = () => {
         }}
         id="jacket"
       >
-        <ContextMenu modal={true}>
-          <ContextMenuTrigger
-            ref={ref}
-            onMouseDown={(e) => {
-              console.log(ref.current);
-              if (e.button == 2) {
-                ref.current.click("ContextMenu");
-              }
-            }}
-            onContextMenu={(e) => console.log(e.button, "asfs")}
+        <DropdownMenu>
+          <DropdownMenuTrigger
             style={{
               width: "25px",
               height: "25px",
@@ -56,14 +47,15 @@ const Front = () => {
               left: 0,
               borderRadius: "50%",
             }}
-          ></ContextMenuTrigger>
-          <ContextMenuContent>
-            <div className="text-center text-base font-semibold">Shleeves</div>
-            <ContextMenuItem>Notched</ContextMenuItem>
-            <ContextMenuItem>Peak</ContextMenuItem>
-            <ContextMenuItem>Shawl</ContextMenuItem>
-          </ContextMenuContent>
-        </ContextMenu>
+          ></DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Shleeves</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Notched</DropdownMenuItem>
+            <DropdownMenuItem>Peak</DropdownMenuItem>
+            <DropdownMenuItem>Shawl</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
       <div
         style={{
@@ -83,8 +75,8 @@ const Front = () => {
         }}
         id="jacket"
       >
-        <ContextMenu>
-          <ContextMenuTrigger
+        <DropdownMenu>
+          <DropdownMenuTrigger
             style={{
               width: "25px",
               height: "25px",
@@ -95,14 +87,15 @@ const Front = () => {
               left: 0,
               borderRadius: "50%",
             }}
-          ></ContextMenuTrigger>
-          <ContextMenuContent>
-            <div className="text-center text-base font-semibold">Button</div>
-            <ContextMenuItem>Notched</ContextMenuItem>
-            <ContextMenuItem>Peak</ContextMenuItem>
-            <ContextMenuItem>Shawl</ContextMenuItem>
-          </ContextMenuContent>
-        </ContextMenu>
+          ></DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Button</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Notched</DropdownMenuItem>
+            <DropdownMenuItem>Peak</DropdownMenuItem>
+            <DropdownMenuItem>Shawl</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
       <div
         style={{
@@ -122,8 +115,8 @@ const Front = () => {
         }}
         id="jacket"
       >
-        <ContextMenu>
-          <ContextMenuTrigger
+        <DropdownMenu>
+          <DropdownMenuTrigger
             style={{
               width: "25px",
               height: "25px",
@@ -134,14 +127,15 @@ const Front = () => {
               left: 0,
               borderRadius: "50%",
             }}
-          ></ContextMenuTrigger>
-          <ContextMenuContent>
-            <div className="text-center text-base font-semibold">Pockets</div>
-            <ContextMenuItem>Notched</ContextMenuItem>
-            <ContextMenuItem>Peak</ContextMenuItem>
-            <ContextMenuItem>Shawl</ContextMenuItem>
-          </ContextMenuContent>
-        </ContextMenu>
+          ></DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Button</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Notched</DropdownMenuItem>
+            <DropdownMenuItem>Peak</DropdownMenuItem>
+            <DropdownMenuItem>Shawl</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );

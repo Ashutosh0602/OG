@@ -201,7 +201,8 @@ function Grid() {
                 backgroundColor: "#7E7E7E",
                 color: "white",
                 padding: "0.5rem",
-                borderRadius: "15px",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
@@ -233,7 +234,8 @@ function Grid() {
                 backgroundColor: "#7E7E7E",
                 color: "white",
                 padding: "0.5rem",
-                borderRadius: "15px",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
@@ -260,7 +262,9 @@ function Grid() {
               paddingTop: "1rem",
               paddingBottom: "1rem",
               borderRadius: "15px",
+              cursor: "pointer",
             }}
+            className={classes.latest}
           >
             Latest
           </div>
@@ -273,7 +277,9 @@ function Grid() {
               borderRadius: "15px",
               marginTop: "0.5rem",
               marginBottom: "0.5rem",
+              cursor: "pointer",
             }}
+            className={classes.unique}
           >
             Unique
           </div>
@@ -285,7 +291,9 @@ function Grid() {
               paddingBottom: "1rem",
               color: "white",
               borderRadius: "15px",
+              cursor: "pointer",
             }}
+            className={classes.relatables}
           >
             Relatables
           </div>
@@ -304,7 +312,8 @@ function Grid() {
                 backgroundColor: "#7E7E7E",
                 color: "white",
                 padding: "0.5rem",
-                borderRadius: "15px",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
@@ -336,7 +345,8 @@ function Grid() {
                 backgroundColor: "#7E7E7E",
                 color: "white",
                 padding: "0.5rem",
-                borderRadius: "15px",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
@@ -368,7 +378,8 @@ function Grid() {
                 backgroundColor: "#7E7E7E",
                 color: "white",
                 padding: "0.5rem",
-                borderRadius: "15px",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
@@ -400,7 +411,8 @@ function Grid() {
                 backgroundColor: "#7E7E7E",
                 color: "white",
                 padding: "0.5rem",
-                borderRadius: "15px",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
                 width: "100%",
                 fontFamily: "Roboto slab",
               }}
@@ -454,14 +466,15 @@ function Grid() {
       </div>
       <div
         style={{ backgroundColor: "#D6D6D6", width: "90%", margin: "auto" }}
-        className={`${classes.mb_grid_bottom} flex flex-wrap py-8 px-4 `}
+        className={`${classes.mb_grid_bottom} flex flex-wrap py-2 px-4 `}
       >
         <div
           style={{
             fontSize: "3.5rem",
-            fontWeight: 600,
+            fontWeight: 800,
             width: "50%",
             padding: "calc(100% * 0.05)",
+            fontFamily: "Roboto Slab",
           }}
         >
           Want to customize your Clothes ?
@@ -469,10 +482,11 @@ function Grid() {
         <div style={{ width: "50%", margin: "auto" }}>
           <div
             style={{
-              // fontSize: "1.5rem",
+              fontSize: "1.6rem",
               fontWeight: 400,
               padding: "calc(100% * 0.05)",
               margin: "auto",
+              fontFamily: "poppins",
             }}
             className={classes.grid_bottom_detail}
           >

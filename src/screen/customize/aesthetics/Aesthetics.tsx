@@ -1,10 +1,12 @@
 import man from "../../../assets/grid/customModel.png";
 import {
-  ContextMenu,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuTrigger,
-} from "@/components/ui/context-menu";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Aesthetics = () => {
   return (
@@ -36,8 +38,8 @@ const Aesthetics = () => {
         }}
         id="jacket"
       >
-        <ContextMenu>
-          <ContextMenuTrigger
+        <DropdownMenu>
+          <DropdownMenuTrigger
             style={{
               width: "25px",
               height: "25px",
@@ -48,16 +50,15 @@ const Aesthetics = () => {
               left: 0,
               borderRadius: "50%",
             }}
-          ></ContextMenuTrigger>
-          <ContextMenuContent>
-            <div className="text-center text-base font-semibold">
-              Cuff Style
-            </div>
-            <ContextMenuItem>Notched</ContextMenuItem>
-            <ContextMenuItem>Peak</ContextMenuItem>
-            <ContextMenuItem>Shawl</ContextMenuItem>
-          </ContextMenuContent>
-        </ContextMenu>
+          ></DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Button</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Notched</DropdownMenuItem>
+            <DropdownMenuItem>Peak</DropdownMenuItem>
+            <DropdownMenuItem>Shawl</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );
