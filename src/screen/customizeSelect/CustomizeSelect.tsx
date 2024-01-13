@@ -104,6 +104,7 @@ function CustomizeSelect() {
               <NavLink to="customize" state={ls}>
                 <div
                   style={{ cursor: "pointer", margin: "1rem 1rem 1rem 1rem" }}
+                  className={classes.model_hover_container}
                   onClick={() => {
                     return <Product data={ls} key="hvjuh" />;
                   }}

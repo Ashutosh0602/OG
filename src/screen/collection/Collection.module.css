@@ -31,6 +31,9 @@
   .model_hover_container {
     margin: 0 0 2rem 0 !important;
   }
+  .filter {
+    text-align: left;
+  }
   /* .product_container {
     display: grid;
     grid: auto / repeat(2, 1fr);

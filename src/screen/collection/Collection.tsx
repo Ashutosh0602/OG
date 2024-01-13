@@ -172,7 +172,10 @@ function Collection(): any {
           <SheetContent side={"left"} style={{ overflow: "scroll" }}>
             <SheetHeader>
               <SheetTitle>Filters</SheetTitle>
-              <SheetDescription style={{ paddingLeft: "1rem" }}>
+              <SheetDescription
+                className={classes.filter}
+                style={{ paddingLeft: "1rem" }}
+              >
                 <div>All</div>
                 <div>Category One</div>
                 <div>Category two</div>
@@ -270,9 +273,9 @@ function Collection(): any {
                 <ToggleGroup type="single">
                   <ToggleGroupItem value="a">Option One</ToggleGroupItem>
                   <ToggleGroupItem value="b">Option two</ToggleGroupItem>
-                  <ToggleGroupItem value="c">Option three</ToggleGroupItem>
+                  {/* <ToggleGroupItem value="c">Option three</ToggleGroupItem>
                   <ToggleGroupItem value="d">Option four</ToggleGroupItem>
-                  <ToggleGroupItem value="e">Option five</ToggleGroupItem>
+                  <ToggleGroupItem value="e">Option five</ToggleGroupItem> */}
                 </ToggleGroup>
                 {/* Filter four */}
                 <Separator
@@ -343,7 +346,7 @@ function Collection(): any {
                   Filter Six
                 </h2>
                 <div>
-                  <Slider defaultValue={[33]} max={100} step={0} />
+                  <Slider defaultValue={[38]} max={100} step={1} />
                 </div>
 
                 {/* Filter seven */}
