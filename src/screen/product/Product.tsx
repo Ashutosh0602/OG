@@ -1,12 +1,14 @@
 // import classes from "./Products.module.css";
 // import product from "../../assets/grid/pro1.png";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import classes from "./Product.module.css";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { cartAction } from "@/redux/State";
+import { stat } from "fs";
 // const data = [
 //   {
 //     img: product,
@@ -22,7 +24,11 @@ function Product(prop: any) {
   const { state } = useLocation();
   const dispatch = useDispatch();
 
-  console.log(state, prop);
+  const cart: any = useSelector((state) => state);
+  const quant = cart.cartReducer.find((ls: any) => ls.id == state.id);
+  console.log(quant.quantity);
+
+  // console.log(state, prop);
   return (
     <>
       {() => {
@@ -144,7 +150,11 @@ function Product(prop: any) {
                   console.log("added");
                 }}
               >
-                Add to Cart
+                {quant.quantity > 0 ? (
+                  <NavLink to="/cart">Go To Cart</NavLink>
+                ) : (
+                  <div>Add to Cart</div>
+                )}
               </Button>
             </div>
           </div>
