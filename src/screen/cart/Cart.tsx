@@ -30,7 +30,7 @@ function Cart() {
 
   const [Razorpay] = useRazorpay();
 
-  const handlePayment = async (params: any) => {
+  const handlePayment = async () => {
     // const order = await createOrder(params); //  Create order on your backend
 
     const options = {
@@ -72,25 +72,25 @@ function Cart() {
     rzp1.open();
   };
 
-  const skeletonScreen = () => {
-    return (
-      <div className="flex flex-wrap justify-center">
-        {Array.from({ length: 8 }).map(() => {
-          return (
-            <>
-              <div className="space-y-4 mx-6 my-6">
-                <Skeleton className="h-64 w-64 " />
-                <div className="space-y-2">
-                  <Skeleton className="h-4 w-[250px]" />
-                  <Skeleton className="h-4 w-[200px]" />
-                </div>
-              </div>
-            </>
-          );
-        })}
-      </div>
-    );
-  };
+  // const skeletonScreen = () => {
+  //   return (
+  //     <div className="flex flex-wrap justify-center">
+  //       {Array.from({ length: 8 }).map(() => {
+  //         return (
+  //           <>
+  //             <div className="space-y-4 mx-6 my-6">
+  //               <Skeleton className="h-64 w-64 " />
+  //               <div className="space-y-2">
+  //                 <Skeleton className="h-4 w-[250px]" />
+  //                 <Skeleton className="h-4 w-[200px]" />
+  //               </div>
+  //             </div>
+  //           </>
+  //         );
+  //       })}
+  //     </div>
+  //   );
+  // };
 
   const cartScreen = () => {
     return (
