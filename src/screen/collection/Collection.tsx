@@ -36,6 +36,7 @@ import { motion } from "framer-motion";
 
 const data = [
   {
+    id: 1,
     img: model1,
     title: "Regular Fit Long Sleeve Top",
     price: 38.99,
@@ -43,6 +44,7 @@ const data = [
     color: "#BAFFC9",
   },
   {
+    id: 2,
     img: model2,
     title: "Regular Fit Long Sleeve Top",
     price: 63.56,
@@ -50,6 +52,7 @@ const data = [
     color: "#FFDFBA",
   },
   {
+    id: 3,
     img: model3,
     title: "Regular Fit Long Sleeve Top",
     price: 34.45,
@@ -57,6 +60,7 @@ const data = [
     color: "#BAE1FF",
   },
   {
+    id: 4,
     img: model4,
     title: "Regular Fit Long Sleeve Top",
     price: 34.45,

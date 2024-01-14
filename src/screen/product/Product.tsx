@@ -5,6 +5,8 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import classes from "./Product.module.css";
+import { useDispatch } from "react-redux";
+import { cartAction } from "@/redux/State";
 // const data = [
 //   {
 //     img: product,
@@ -18,6 +20,7 @@ const screen = window.screen.width;
 
 function Product(prop: any) {
   const { state } = useLocation();
+  const dispatch = useDispatch();
 
   console.log(state, prop);
   return (
@@ -136,6 +139,10 @@ function Product(prop: any) {
                   padding: "1rem 2rem 1rem 2rem",
                 }}
                 className={classes.mb_product_button}
+                onClick={() => {
+                  dispatch(cartAction.addToCart(state));
+                  console.log("added");
+                }}
               >
                 Add to Cart
               </Button>
