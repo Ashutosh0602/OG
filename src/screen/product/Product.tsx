@@ -8,7 +8,7 @@ import classes from "./Product.module.css";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { cartAction } from "@/redux/State";
-import { stat } from "fs";
+// import { stat } from "fs";
 // const data = [
 //   {
 //     img: product,
@@ -28,7 +28,7 @@ function Product(prop: any) {
   const quant = cart.cartReducer.find((ls: any) => ls.id == state.id);
   console.log(quant.quantity);
 
-  // console.log(state, prop);
+  console.log(prop);
   return (
     <>
       {() => {
