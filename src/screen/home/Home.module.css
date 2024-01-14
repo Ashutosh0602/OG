@@ -26,10 +26,10 @@
 }
 
 .explore_button_container {
-  /* margin-top: 20rem; */
-  position: absolute;
-  bottom: 0%;
-  left: 2%;
+  margin-top: 7rem;
+  /* position: absolute; */
+  /* bottom: 0%; */
+  /* left: 2%; */
 }
 .explore_button {
   background-color: black;
@@ -48,7 +48,7 @@
   width: 35vw;
   /* height: 100%; */
   object-fit: contain;
-  border-radius: 7rem 1rem 7rem 7rem;
+  border-radius: 7rem 1rem 7rem 1rem;
 }
 
 .dotted_bottom {

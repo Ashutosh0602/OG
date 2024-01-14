@@ -64,10 +64,11 @@ function Home() {
                   centeredSlides={true}
                   freeMode={true}
                   speed={1000}
+                  loop={true}
                   autoplay={{
                     delay: 2500,
                     waitForTransition: true,
-                    stopOnLastSlide: true,
+                    // stopOnLastSlide: true,
                     disableOnInteraction: false,
                   }}
                   navigation={false}
@@ -104,10 +105,11 @@ function Home() {
               centeredSlides={true}
               freeMode={true}
               speed={1000}
+              loop={true}
               autoplay={{
                 delay: 2500,
                 waitForTransition: true,
-                stopOnLastSlide: true,
+                // stopOnLastSlide: true,
                 disableOnInteraction: false,
               }}
               navigation={false}
@@ -135,8 +137,20 @@ function Home() {
             animate={{
               x: "100%",
               y: ["0rem", "3rem", "0rem"],
+              transition: {
+                delay: 2.5,
+                ease: "easeOut",
+                duration: 0.7,
+                yoyo: 10,
+              },
             }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 2.5 }}
+            // transition={{
+            //   duration: 0.7,
+            //   ease: "easeOut",
+            //   delay: 2.5,
+            //   yoyo: 2,
+            //   // repeatType: "loop",
+            // }}
           >
             <img src={dotted} className={classes.dotted_bottom} />
           </motion.div>
@@ -146,8 +160,20 @@ function Home() {
               animate={{
                 x: "-34vw",
                 y: ["0rem", "-3rem", "0rem"],
+                transition: {
+                  delay: 2.5,
+                  ease: "easeOut",
+                  duration: 0.7,
+                  yoyo: 10,
+                },
               }}
-              transition={{ duration: 0.7, ease: "easeOut", delay: 2.5 }}
+              // transition={{
+              //   duration: 0.7,
+              //   ease: "easeOut",
+              //   delay: 2.5,
+              //   // repeatType: "loop",
+              //   // yoyo: Infinity,
+              // }}
               src={dotted}
               className={classes.dotted_up}
             />

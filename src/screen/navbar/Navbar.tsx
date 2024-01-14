@@ -140,7 +140,7 @@ function Navbar() {
                 className=" py-2 px-3 text-black bg-white rounded hover:text-slate-600"
                 aria-current="page"
               >
-                <NavLink to="">Home</NavLink>
+                <NavLink to="">HOME</NavLink>
               </a>
             </li>
             <li>
@@ -148,7 +148,7 @@ function Navbar() {
                 href="#"
                 className=" py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-slate-600"
               >
-                <NavLink to="shop">Shop</NavLink>
+                <NavLink to="shop">SHOP</NavLink>
               </a>
             </li>
             <li>
@@ -156,7 +156,7 @@ function Navbar() {
                 href="#"
                 className=" py-2 px-3 text-black bg-white rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black hover:text-slate-600"
               >
-                <NavLink to="select">Customize</NavLink>
+                <NavLink to="select">CUSTOMIZE</NavLink>
               </a>
             </li>
             {/* <li> */}
@@ -167,7 +167,7 @@ function Navbar() {
                     style={{ padding: 0, margin: 0 }}
                     className={classes.categories}
                   >
-                    Categories
+                    CATEGORIES
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
