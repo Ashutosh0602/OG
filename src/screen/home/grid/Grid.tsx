@@ -15,8 +15,8 @@ function Grid() {
   const modelPack: any = useRef();
   const [width, setWidth] = useState<number>(0);
   useEffect(() => {
-    const width = modelPack.current.clientWidth;
-    setWidth(width);
+    const wide = modelPack.current.clientWidth;
+    setWidth(wide);
     // Do something with the width
   }, []);
 
@@ -104,7 +104,168 @@ function Grid() {
             </div>
           </SwiperSlide>
         </Swiper>
-        <NavLink to="/designer">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          freeMode={false}
+          speed={1000}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            waitForTransition: true,
+            // stopOnLastSlide: false,
+            // disableOnInteraction: false,
+          }}
+          navigation={false}
+          modules={[Autoplay]}
+          className={classes.mySwiper}
+        >
+          <SwiperSlide>
+            <NavLink to="/designer">
+              <div
+                className={classes.card_model}
+                // onTouchMove={() =>
+                //   setWidth(modelPack.current.getBoundingClientRect().width)
+                // }
+                ref={modelPack}
+                style={{
+                  marginBottom: "1rem",
+                  position: "relative",
+                  padding: "1rem",
+                }}
+              >
+                <div>
+                  <img src={img2} />
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    // left: 0,
+                    backgroundColor: "#7E7E7E",
+                    color: "white",
+                    padding: "0.5rem",
+                    borderBottomLeftRadius: "15px",
+                    borderBottomRightRadius: "15px",
+                    // width: "430px",
+                    width: `${width - 32}px`,
+                    fontFamily: "Roboto slab",
+                  }}
+                  className={classes.model_detail}
+                >
+                  <div>Design Clothes Caption</div>
+                  <div className="flex items-center justify-end">
+                    <div className="mr-2">Profile Name</div>
+                    <div>
+                      <Avatar>
+                        <AvatarImage src={img2} />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </NavLink>
+          </SwiperSlide>
+          <SwiperSlide>
+            <NavLink to="/designer">
+              <div
+                className={classes.card_model}
+                // onTouchMove={() =>
+                //   setWidth(modelPack.current.getBoundingClientRect().width)
+                // }
+                ref={modelPack}
+                style={{
+                  marginBottom: "1rem",
+                  position: "relative",
+                  padding: "1rem",
+                }}
+              >
+                <div>
+                  <img src={img1} />
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    // left: 0,
+                    backgroundColor: "#7E7E7E",
+                    color: "white",
+                    padding: "0.5rem",
+                    borderBottomLeftRadius: "15px",
+                    borderBottomRightRadius: "15px",
+                    // width: "430px",
+                    width: `${width - 32}px`,
+                    fontFamily: "Roboto slab",
+                  }}
+                  className={classes.model_detail}
+                >
+                  <div>Design Clothes Caption</div>
+                  <div className="flex items-center justify-end">
+                    <div className="mr-2">Profile Name</div>
+                    <div>
+                      <Avatar>
+                        <AvatarImage src={img1} />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </NavLink>
+          </SwiperSlide>
+          <SwiperSlide>
+            <NavLink to="/designer">
+              <div
+                className={classes.card_model}
+                // onTouchMove={() =>
+                //   setWidth(modelPack.current.getBoundingClientRect().width)
+                // }
+                ref={modelPack}
+                style={{
+                  marginBottom: "1rem",
+                  position: "relative",
+                  padding: "1rem",
+                }}
+              >
+                <div>
+                  <img src={img2} />
+                </div>
+
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    // left: 0,
+                    backgroundColor: "#7E7E7E",
+                    color: "white",
+                    padding: "0.5rem",
+                    borderBottomLeftRadius: "15px",
+                    borderBottomRightRadius: "15px",
+                    // width: "430px",
+                    width: `${width - 32}px`,
+                    fontFamily: "Roboto slab",
+                  }}
+                  className={classes.model_detail}
+                >
+                  <div>Design Clothes Caption</div>
+                  <div className="flex items-center justify-end">
+                    <div className="mr-2">Profile Name</div>
+                    <div>
+                      <Avatar>
+                        <AvatarImage src={img2} />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </NavLink>
+          </SwiperSlide>
+        </Swiper>
+        {/* <NavLink to="/designer">
           <div
             className={classes.card_model}
             // onTouchMove={() =>
@@ -149,7 +310,7 @@ function Grid() {
               </div>
             </div>
           </div>
-        </NavLink>
+        </NavLink> */}
       </div>
       {/* //////////////////// */}
 

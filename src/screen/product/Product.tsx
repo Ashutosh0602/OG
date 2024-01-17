@@ -26,7 +26,7 @@ function Product(prop: any) {
 
   const cart: any = useSelector((state) => state);
   const quant = cart.cartReducer.find((ls: any) => ls.id == state.id);
-  console.log(quant.quantity);
+  // console.log(quant.quantity);
 
   console.log(prop);
   return (
@@ -150,7 +150,7 @@ function Product(prop: any) {
                   console.log("added");
                 }}
               >
-                {quant.quantity > 0 ? (
+                {quant?.quantity > 0 ? (
                   <NavLink to="/cart">Go To Cart</NavLink>
                 ) : (
                   <div>Add to Cart</div>

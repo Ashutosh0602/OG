@@ -1,6 +1,10 @@
 import classes from "./Offer.module.css";
 import offerModel from "../../../assets/grid/offerModel.png";
 import dotted from "../../../assets/grid/dottedOffer.svg";
+// import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function Offer() {
   return (

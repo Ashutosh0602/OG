@@ -112,6 +112,7 @@
     margin-bottom: 1rem;
   }
   .mb_pDescription {
+    display: none !important;
     font-weight: 500 !important;
     font-size: 1rem;
   }

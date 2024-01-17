@@ -64,8 +64,10 @@
     background-color: white;
   }
   .offer_text_container {
-    width: 100% !important;
+    width: 92% !important;
     margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 2rem !important;
     text-align: center;
     background-color: #d6d6d6;
     z-index: 10;
