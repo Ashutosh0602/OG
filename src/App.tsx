@@ -7,8 +7,10 @@ const Layout = lazy(() => import("./screen/layout/Layout"));
 const Home = lazy(() => import("./screen/home/Home"));
 // import Home from "./screen/home/Home";
 
-const Customize = lazy(() => import("./screen/customize/Customize"));
+// const Customize = lazy(() => import("./screen/customize/Customize"));
 // import Customize from "./screen/customize/Customize";
+
+const Customize = lazy(() => import("./screen/customize/CustomSirt"));
 
 const Collection = lazy(() => import("./screen/collection/Collection"));
 // import Collection from "./screen/collection/Collection";
