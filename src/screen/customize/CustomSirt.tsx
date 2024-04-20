@@ -124,16 +124,23 @@ const sets = [
 ];
 
 const CustomSirt = () => {
-  const [collar, setCollar] = useState<string>(sets[0].collar["newKent"]);
   const [shirt, setShirt] = useState<number>(0);
-  const [cuff, setCuff] = useState<string>(sets[0].cuffs["singleCuff1"]);
+  const [collar, setCollar] = useState<string>(sets[shirt].collar["newKent"]);
+  const [cuff, setCuff] = useState<string>(sets[shirt].cuffs["singleCuff1"]);
 
   return (
     <section className="flex">
       <div>
         {sets?.map((value, key) => {
           return (
-            <div className=" m-4" onClick={() => setShirt(key)}>
+            <div
+              className=" m-4"
+              onClick={() => {
+                setShirt(key);
+                setCollar(sets[key].collar["newKent"]);
+                setCuff(sets[key].cuffs["singleCuff1"]);
+              }}
+            >
               <img className=" w-40" src={value["logo"]} />
               <div className=" text-center">{value.name}</div>
             </div>
